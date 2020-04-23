@@ -1,0 +1,37 @@
+<ng-template #register let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Registrate</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="modal-body">
+      <div class="row justify-content-center">
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" placeholder="Nombre" required onkeypress="checkValidityRegister()" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" placeholder="Apellidos" required onkeyup="checkValidityRegister()"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Correo" required onkeyup="checkValidityRegister()"/>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Contraseña" required name=up onkeyup="checkValidityRegister()"/>
+      </div>
+      <div class="form-group">
+        <input  type="password" class="form-control"  placeholder="Confirmar Contraseña" required name=up2 onkeyup="checkValidityRegister()"/>
+      </div>
+      <div class="form-group ">
+        <label class="checkbox-inline"><input type="checkbox" required> Acepto los <a href="#">términos
+          de uso</a> y el <a href="#"> aviso de privacidad</a></label>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button id="ph_account_create" class="btn btn-outline-success" disabled
+            type="submit" >Crear Cuenta</button>
+  </div>
+  </form>
+</ng-template>
