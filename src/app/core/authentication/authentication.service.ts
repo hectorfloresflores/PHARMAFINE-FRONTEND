@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import {map} from "rxjs/operators";
-import {BehaviorSubject, Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {catchError, map} from "rxjs/operators";
+import {BehaviorSubject, Observable, pipe, throwError} from "rxjs";
+import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private currentUserSubject: BehaviorSubject<any>;
-  public currentUser: Observable<any>;
+
   token = '';
+  private ROOT_URL = 'https://pharmafine.herokuapp.com'
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
-    this.currentUser = this.currentUserSubject.asObservable();
+
   }
 
   private saveToken(token: string) {
@@ -47,13 +46,15 @@ export class AuthenticationService {
   }
 
   public login(username: string, password: string) {
-    return this.http.post<any>(`/login`, { username, password })
-      .pipe(map(user => {
-        // store user details and jwt token in local storage to keep user logged in between page refreshes
-        // localStorage.setItem('currentUser', JSON.stringify(user));
-        // this.currentUserSubject.next(user);
-        console.log(user);
-        return user;
+
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+    }
+    return this.http.post<any>(this.ROOT_URL+'/login', { email:username,password: password },options)
+      .pipe(map(result => {
+        this.saveToken(result.token);
+
       }));
+
   }
 }

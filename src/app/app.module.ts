@@ -15,6 +15,8 @@ import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './core/header/signin/signin.component';
 import { RegisterComponent } from './core/header/register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {AuthenticationService} from "./core/authentication/authentication.service";
 // This app was made it with the folder structure expose in the link below...
 // https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 
@@ -32,9 +34,10 @@ import {ReactiveFormsModule} from "@angular/forms";
         BrowserModule,
         AppRoutingModule,
         NgbModule,
+        HttpClientModule,
         ReactiveFormsModule
     ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 
 })

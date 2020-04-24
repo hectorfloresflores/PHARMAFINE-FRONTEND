@@ -2,6 +2,7 @@ import {Component, OnInit, EventEmitter, ViewChild, ElementRef, Output} from '@a
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ActivatedRoute, Router} from "@angular/router";
+import {AuthenticationService} from "../../authentication/authentication.service";
 
 
 @Component({
@@ -29,7 +30,7 @@ export class SigninComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
   submitted = false;
-  returnUrl: string;
+  returnUrl = '/';
   error = '';
 
   /**
@@ -43,6 +44,7 @@ export class SigninComponent implements OnInit {
               private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
+              private authenticationService: AuthenticationService
   ) {}
 
   /**
@@ -82,7 +84,7 @@ export class SigninComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
-
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
 
@@ -98,16 +100,18 @@ export class SigninComponent implements OnInit {
     }
 
     this.loading = true;
-    // this.authenticationService.login(this.f.username.value, this.f.password.value)
-    //   .pipe(first())
-    //   .subscribe(
-    //     data => {
-    //       this.router.navigate([this.returnUrl]);
-    //     },
-    //     error => {
-    //       this.error = error;
-    //       this.loading = false;
-    //     });
+    this.authenticationService.login(this.f.username.value, this.f.password.value)
+      .subscribe(
+        data => {
+
+          // this.router.navigateByUrl('/home');
+          window.location.reload();
+        },
+        error => {
+          console.log(error.error)
+          this.error = error.error;
+          this.loading = false;
+        });
   }
 
 

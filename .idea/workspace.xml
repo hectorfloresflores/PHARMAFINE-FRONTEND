@@ -11,16 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/footer/footer.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/footer/footer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/footer/footer.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/footer/footer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +49,20 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="AuthenticationService.should get a token" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/src/app/core/authentication/authentication.service.spec.ts" />
+      <test-names>
+        <test-name value="AuthenticationService" />
+        <test-name value="should get a token" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests (webpage)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
@@ -82,6 +93,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Karma.AuthenticationService.should get a token" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -94,6 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587349658848</updated>
       <workItem from="1587349660851" duration="14511000" />
+      <workItem from="1587684977427" duration="7936000" />
     </task>
     <servers />
   </component>
@@ -110,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="300" y="131" key="#Plugins" timestamp="1587616039508">
@@ -120,22 +138,54 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="513" y="204" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1587615546386" />
-    <state width="1379" height="210" key="GridCell.Tab.0.bottom" timestamp="1587672066977">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1587691969094">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1379" height="210" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587672066977" />
-    <state width="1379" height="210" key="GridCell.Tab.0.center" timestamp="1587672066976">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587691969094" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1587691969093">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1379" height="210" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587672066976" />
-    <state width="1379" height="210" key="GridCell.Tab.0.left" timestamp="1587672066975">
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587691969093" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1587691969093">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1379" height="210" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587672066975" />
-    <state width="1379" height="210" key="GridCell.Tab.0.right" timestamp="1587672066976">
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587691969093" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1587691969094">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1379" height="210" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587672066976" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587691969094" />
+    <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587687447717">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587687447717" />
+    <state width="1419" height="222" key="GridCell.Tab.1.center" timestamp="1587687447716">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1587687447716" />
+    <state width="1419" height="222" key="GridCell.Tab.1.left" timestamp="1587687447715">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1587687447715" />
+    <state width="1419" height="222" key="GridCell.Tab.1.right" timestamp="1587687447716">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1587687447716" />
+    <state width="1419" height="222" key="GridCell.Tab.4.bottom" timestamp="1587686405341">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.4.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587686405341" />
+    <state width="1419" height="222" key="GridCell.Tab.4.center" timestamp="1587686405337">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.4.center/0.23.1440.877@0.23.1440.877" timestamp="1587686405337" />
+    <state width="1419" height="222" key="GridCell.Tab.4.left" timestamp="1587686405336">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.4.left/0.23.1440.877@0.23.1440.877" timestamp="1587686405336" />
+    <state width="1419" height="222" key="GridCell.Tab.4.right" timestamp="1587686405338">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.4.right/0.23.1440.877@0.23.1440.877" timestamp="1587686405338" />
     <state x="286" y="147" key="SettingsEditor" timestamp="1587616072436">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
