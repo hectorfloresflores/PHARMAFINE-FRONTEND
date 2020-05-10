@@ -2,6 +2,7 @@ import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@a
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ActivatedRoute, Router} from "@angular/router";
+import {UserService} from "../../http/user.service";
 
 @Component({
   selector: 'app-register',
@@ -21,10 +22,11 @@ export class RegisterComponent implements OnInit {
 
   /*Modal SGININ*/
   closeResult = '';
-  loginForm: FormGroup;
+  registerForm: FormGroup;
   loading = false;
   submitted = false;
   returnUrl: string;
+  saveUsername = false;
   error = '';
 
   /**
@@ -38,6 +40,7 @@ export class RegisterComponent implements OnInit {
               private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
+              private userService: UserService,
   ) {}
 
   /**
@@ -52,13 +55,11 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-
   /**
    * Know how the modal was closed by the user.
    * @param reason
    */
   private getDismissReason(reason: any): string {
-
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -69,36 +70,29 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
+    this.registerForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      lastname: ['', Validators.required],
+      name: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      repassword: ['', [Validators.required, Validators.minLength(6)]],
+      terms: ['',[Validators.required]]
     });
-
   }
 
-
   // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+  get f() { return this.registerForm.controls; }
 
   onSubmit() {
-    this.submitted = true;
+
+     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
+    if (this.registerForm.invalid) {
       return;
     }
-
-    this.loading = true;
-    // this.authenticationService.login(this.f.username.value, this.f.password.value)
-    //   .pipe(first())
-    //   .subscribe(
-    //     data => {
-    //       this.router.navigate([this.returnUrl]);
-    //     },
-    //     error => {
-    //       this.error = error;
-    //       this.loading = false;
-    //     });
+    alert('valid')
+    //this.userService.register(this.registerForm.value);
   }
 
 

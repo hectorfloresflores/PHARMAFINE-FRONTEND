@@ -3,22 +3,29 @@ import {catchError, map} from "rxjs/operators";
 import {BehaviorSubject, Observable, pipe, throwError} from "rxjs";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 
+class User {
+  email: string;
+  token: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
 
-  token = '';
   private ROOT_URL = 'https://pharmafine.herokuapp.com'
+  private currentUserSubject: BehaviorSubject<User>;
+  public currentUser: Observable<User>;
 
   constructor(private http: HttpClient) {
 
   }
 
-  private saveToken(token: string) {
+  private saveToken(token: string, email: string) {
     localStorage.setItem('tokenUser', token);
-    this.token = token;
+    localStorage.setItem('userEmail', email);
+
   }
 
   public isLoggedIn(): boolean {
@@ -36,8 +43,8 @@ export class AuthenticationService {
   public getTokenData() {
     let payload;
 
-    if (this.token) {
-      payload = this.token.split('.')[1];
+    if (localStorage.getItem('tokenUser') == undefined) {
+      payload = localStorage.getItem('tokenUser').split('.')[1];
       payload = window.atob(payload);
       return JSON.parse(payload);
     } else {
@@ -52,9 +59,13 @@ export class AuthenticationService {
     }
     return this.http.post<any>(this.ROOT_URL+'/login', { email:username,password: password },options)
       .pipe(map(result => {
-        this.saveToken(result.token);
-
+        this.saveToken(result.token,username);
       }));
 
+  }
+
+  logout() {
+    localStorage.removeItem('tokenUser');
+    localStorage.removeItem('userEmail');
   }
 }

@@ -5,32 +5,50 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="modal-body">
       <div class="row justify-content-center">
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Nombre" required onkeypress="checkValidityRegister()" />
+          <input type="text" class="form-control" formControlName="name" placeholder="Nombre"
+                 [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">First Name is required</div>
+          </div>
+
         </div>
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Apellidos" required onkeyup="checkValidityRegister()"/>
+          <input type="text" class="form-control" formControlName="lastname" placeholder="Apellidos"
+                 [ngClass]="{'is-invalid': submitted && f.lastname.errors}"/>
         </div>
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Correo" required onkeyup="checkValidityRegister()"/>
+        <input type="email" class="form-control" formControlName="email" placeholder="Correo"
+               [ngClass]="{ 'is-invalid': submitted && f.email.errors}"/>
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Contraseña" required name=up onkeyup="checkValidityRegister()"/>
+        <input type="password" class="form-control" formControlName="password" placeholder="Contraseña"
+               [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
       </div>
       <div class="form-group">
-        <input  type="password" class="form-control"  placeholder="Confirmar Contraseña" required name=up2 onkeyup="checkValidityRegister()"/>
+        <input  type="password" class="form-control" formControlName="repassword" placeholder="Confirmar Contraseña"
+                [ngClass]="{ 'is-invalid': submitted && f.repassword.errors }"/>
+        <div *ngIf="submitted && f.repassword.errors" class="invalid-feedback">
+          <div *ngIf="f.repassword.errors.required">Contraseña requerida</div>
+          <div *ngIf="f.repassword.errors.minlength">La contraseña debe de ser mayor a 6 caracteres</div>
+          <div *ngIf="f.password.value != f.repassword.value">Contraseña no coinciden</div>
+        </div>
       </div>
       <div class="form-group ">
-        <label class="checkbox-inline"><input type="checkbox" required> Acepto los <a href="#">términos
+        <label class="checkbox-inline"><input type="checkbox" formControlName="terms"
+              [checked]="saveUsername" (change)="saveUsername = !saveUsername"
+              [ngClass]="{ 'is-invalid': submitted && !saveUsername }"> Acepto los <a href="#">términos
           de uso</a> y el <a href="#"> aviso de privacidad</a></label>
+        <div *ngIf="submitted && saveUsername" class="invalid-feedback">
+        </div>
       </div>
   </div>
   <div class="modal-footer">
-    <button id="ph_account_create" class="btn btn-outline-success" disabled
+    <button class="btn btn-outline-success"
             type="submit" >Crear Cuenta</button>
   </div>
   </form>
