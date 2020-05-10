@@ -25,41 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V7">
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/authentication/authentication.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/authentication/authentication.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/footer/footer.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/footer/footer.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/guards/auth.guard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/guards/auth.guard.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/header.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/header.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/register/register.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/register/register.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/signin/signin.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/core/header/signin/signin.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/modules/home/pages/home/home.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/modules/home/pages/home/home.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/modules/products/pages/products/products.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/modules/products/pages/products/products.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/http/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/http/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +138,7 @@
       <workItem from="1587965636870" duration="819000" />
       <workItem from="1588007691846" duration="1272000" />
       <workItem from="1588039625881" duration="608000" />
-      <workItem from="1589067081612" duration="18558000" />
+      <workItem from="1589067081612" duration="19363000" />
     </task>
     <task id="LOCAL-00001" summary="V2">
       <created>1587693085656</created>
@@ -214,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589078407208</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="V8">
+      <created>1589090183107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589090183107</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +226,8 @@
     <MESSAGE value="V5" />
     <MESSAGE value="V6" />
     <MESSAGE value="V7" />
-    <option name="LAST_COMMIT_MESSAGE" value="V7" />
+    <MESSAGE value="V8" />
+    <option name="LAST_COMMIT_MESSAGE" value="V8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="196" key="#Plugins" timestamp="1587966407790">
@@ -314,10 +290,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589078412134">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589090188444">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589078412134" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589090188444" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

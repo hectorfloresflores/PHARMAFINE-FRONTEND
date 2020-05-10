@@ -105,7 +105,7 @@ export class SigninComponent implements OnInit {
         data => {
 
           // this.router.navigateByUrl('/home');
-          //window.location.reload();
+          window.location.reload();
         },
         error => {
           console.log(error.error)
