@@ -13,6 +13,8 @@ export class HeaderComponent{
   @ViewChild(SigninComponent,{static: true} ) childModalSignIn: SigninComponent ;
   @ViewChild(RegisterComponent,{static: true} ) registerComponent: RegisterComponent ;
 
+  role = localStorage.getItem('userRole');
+
   openSignIn() {
     this.childModalSignIn.open();
   }
