@@ -1,6 +1,7 @@
-import {Component, HostListener, ViewChild} from '@angular/core';
+import {Component, HostListener, ViewChild, OnInit} from '@angular/core';
 import {SigninComponent} from "./signin/signin.component";
 import {RegisterComponent} from "./register/register.component";
+import { User } from 'src/app/shared/models/User';
 
 
 @Component({
@@ -9,11 +10,18 @@ import {RegisterComponent} from "./register/register.component";
   styleUrls: ['./header.component.css']
 
 })
-export class HeaderComponent{
+export class HeaderComponent implements OnInit{
+  user = null;
+  
+  ngOnInit(): void {
+
+    this.user = JSON.parse(localStorage.getItem('user')); //para obter user local
+  }
   @ViewChild(SigninComponent,{static: true} ) childModalSignIn: SigninComponent ;
   @ViewChild(RegisterComponent,{static: true} ) registerComponent: RegisterComponent ;
 
-  role = localStorage.getItem('userRole');
+  
+  
 
   openSignIn() {
     this.childModalSignIn.open();
