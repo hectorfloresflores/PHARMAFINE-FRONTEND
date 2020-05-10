@@ -75,8 +75,7 @@ export class RegisterComponent implements OnInit {
       lastname: ['', Validators.required],
       name: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      repassword: ['', [Validators.required, Validators.minLength(6)]],
-      terms: ['',[Validators.required]]
+      repassword: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
@@ -87,11 +86,18 @@ export class RegisterComponent implements OnInit {
 
      this.submitted = true;
 
+
+     // let user = {
+     //   name :
+     // }
     // stop here if form is invalid
     if (this.registerForm.invalid) {
       return;
     }
-    alert('valid')
+    console.log(this.registerForm.value);
+
+
+
     //this.userService.register(this.registerForm.value);
   }
 

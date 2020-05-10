@@ -39,12 +39,10 @@
         </div>
       </div>
       <div class="form-group ">
-        <label class="checkbox-inline"><input type="checkbox" formControlName="terms"
-              [checked]="saveUsername" (change)="saveUsername = !saveUsername"
-              [ngClass]="{ 'is-invalid': submitted && !saveUsername }"> Acepto los <a href="#">términos
+        <label class="checkbox-inline"><input type="checkbox" > Acepto los <a href="#">términos
           de uso</a> y el <a href="#"> aviso de privacidad</a></label>
-        <div *ngIf="submitted && saveUsername" class="invalid-feedback">
-        </div>
+
+
       </div>
   </div>
   <div class="modal-footer">

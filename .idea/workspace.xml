@@ -25,8 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V5">
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V6">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/models/User.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +136,7 @@
       <workItem from="1587965636870" duration="819000" />
       <workItem from="1588007691846" duration="1272000" />
       <workItem from="1588039625881" duration="608000" />
-      <workItem from="1589067081612" duration="9065000" />
+      <workItem from="1589067081612" duration="11293000" />
     </task>
     <task id="LOCAL-00001" summary="V2">
       <created>1587693085656</created>
@@ -161,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589075826621</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="V6">
+      <created>1589076178989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589076178989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +208,8 @@
     <MESSAGE value="V3" />
     <MESSAGE value="V4" />
     <MESSAGE value="V5" />
-    <option name="LAST_COMMIT_MESSAGE" value="V5" />
+    <MESSAGE value="V6" />
+    <option name="LAST_COMMIT_MESSAGE" value="V6" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="196" key="#Plugins" timestamp="1587966407790">
@@ -259,10 +272,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589075831490">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589076183588">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589075831490" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589076183588" />
     <state x="365" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1589075326783">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

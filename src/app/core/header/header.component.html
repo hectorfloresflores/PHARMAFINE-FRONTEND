@@ -17,17 +17,17 @@
 
         </div>
 
-        <a class="navbar-brand" id="ph_home">
+        <a class="navbar-brand" >
             <img src="../../../assets/images/core/pharma-logo.png" id="ph_home" width="100" height="" alt="" />
         </a>
         <div style="position: absolute;right:0;" class="leftNav">
             <i style="font-style: normal">
-                <input type="image" id="bolsa" class="bag align-middle" src="../../../assets/images/icons/shopping-bag.png"
+                <input type="image"  class="bag align-middle" src="../../../assets/images/icons/shopping-bag.png"
                     width="25" height="" alt="" />
                 <span class="align-text-top carrito reduce-span" id="bolsa">Mi bolsa</span>
             </i>
             <i style="font-style: normal" (click)="openSignIn()">
-                <input type="image" id="cuenta" class="account align-middle" src="../../../assets/images/icons/account.png"
+                <input type="image" class="account align-middle" src="../../../assets/images/icons/account.png"
                     width="25" height="" alt="" />
                 <span class="align-text-top cuenta reduce-span" id="cuenta"></span>
             </i>
@@ -41,15 +41,4 @@
 <app-signin (shoeRegister)="openRegister()"></app-signin>
 <app-register></app-register>
 
-<!--&lt;!&ndash; Modal Account&ndash;&gt;-->
-<!--<ng-template #signin let-modal>-->
-<!--    <app-signin (registerUser)="open(register)" (closeModal)="close(signin)"></app-signin>-->
-<!--</ng-template>-->
-<!--&lt;!&ndash; end of modal sign up &ndash;&gt;-->
 
-
-<!--&lt;!&ndash; Modal Account&ndash;&gt;-->
-<!--<ng-template #register let-modal>-->
-<!--    <app-register></app-register>-->
-<!--</ng-template>-->
-<!-- end of modal sign up -->

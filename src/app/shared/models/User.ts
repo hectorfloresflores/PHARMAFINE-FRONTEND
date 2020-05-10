@@ -9,4 +9,6 @@ export class User {
   date: string;
   url: string;
   token: string;
+
+
 }

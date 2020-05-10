@@ -33,7 +33,7 @@ export class HeaderComponent{
     * @param $event
    */
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset >= 0) {
       this.HeaderBackgroundColor = true;
     }else{
       this.HeaderBackgroundColor = false;
