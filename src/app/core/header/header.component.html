@@ -12,7 +12,7 @@
                 <hr>
 
                 <a href="#">Admin</a>
-                <a href="#">User</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'">User</a>
             </div>
 
             <span class="burger-menu" >
