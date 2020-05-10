@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {catchError, map} from "rxjs/operators";
 import {BehaviorSubject, Observable, pipe, throwError} from "rxjs";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
+import {UserService} from "../http/user.service";
 
 class User {
   email: string;
@@ -18,7 +19,8 @@ export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private userService: UserService) {
 
   }
 
@@ -59,7 +61,13 @@ export class AuthenticationService {
     }
     return this.http.post<any>(this.ROOT_URL+'/login', { email:username,password: password },options)
       .pipe(map(result => {
-        this.saveToken(result.token,username);
+        // this.saveToken(result.token,username);
+
+        this.userService.getUser(username, result.token).subscribe(user =>{
+          localStorage.setItem('user', JSON.stringify(user));
+          console.log(user);
+        })
+
       }));
 
   }
