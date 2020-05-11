@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ActivatedRoute, Router} from "@angular/router";
 import {AuthenticationService} from "../../authentication/authentication.service";
+import {User} from "../../../shared/models/User";
+import {UserService} from "../../http/user.service";
 
 
 @Component({
@@ -32,6 +34,9 @@ export class SigninComponent implements OnInit {
   submitted = false;
   returnUrl = '/';
   error = '';
+  loggedIn = false;
+  title = '';
+  user :User;
 
   /**
    * Create parrams of class sign in modal.
@@ -44,7 +49,8 @@ export class SigninComponent implements OnInit {
               private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               private router: Router,
-              private authenticationService: AuthenticationService
+              private authenticationService: AuthenticationService,
+              private userService: UserService
   ) {}
 
   /**
@@ -85,6 +91,15 @@ export class SigninComponent implements OnInit {
       password: ['', Validators.required]
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+    if (localStorage.user != null) {
+
+      this.loggedIn = this.authenticationService.isLoggedIn();
+      if(this.loggedIn) {
+        this.user = JSON.parse(localStorage.getItem('user'));
+        console.log(this.user)
+      }
+    }
   }
 
 
@@ -103,15 +118,23 @@ export class SigninComponent implements OnInit {
     this.authenticationService.login(this.f.username.value, this.f.password.value)
       .subscribe(
         data => {
-
-          // this.router.navigateByUrl('/home');
-          window.location.reload();
+          this.userService.getUser(this.f.username.value, data.token).subscribe(user =>{
+            localStorage.setItem('user',JSON.stringify(user));
+            this.router.navigateByUrl('/home');
+            window.location.reload();
+          })
         },
         error => {
           console.log(error.error)
           this.error = error.error;
           this.loading = false;
         });
+  }
+
+  logOut() {
+    this.authenticationService.logout();
+    this.router.navigateByUrl('/home');
+    window.location.reload();
   }
 
 

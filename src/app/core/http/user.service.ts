@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {User} from "../../shared/models/User";
+import {catchError} from "rxjs/operators";
+import {throwError} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +27,13 @@ export class UserService {
   }
 
   register(user: User) {
-    return this.http.post(`/users`, user);
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+
+    return this.http.post(this.ROOT_URL +`/users`, user, options);
   }
 
   delete(id: number) {

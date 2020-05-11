@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../../http/user.service";
+import {User} from "../../../shared/models/User";
 
 @Component({
   selector: 'app-register',
@@ -87,18 +88,24 @@ export class RegisterComponent implements OnInit {
      this.submitted = true;
 
 
-     // let user = {
-     //   name :
-     // }
     // stop here if form is invalid
     if (this.registerForm.invalid) {
       return;
     }
     console.log(this.registerForm.value);
 
+    let user = new User(
+      this.registerForm.value.name,
+      this.registerForm.value.lastname,
+      this.registerForm.value.email,
+      this.registerForm.value.password,
+  );
 
 
-    //this.userService.register(this.registerForm.value);
+    this.userService.register(user).subscribe(
+      data => console.log('success', data),
+      error => console.log('oops', error.error)
+    );
   }
 
 

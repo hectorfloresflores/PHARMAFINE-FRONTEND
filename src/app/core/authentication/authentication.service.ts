@@ -19,8 +19,7 @@ export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
-  constructor(private http: HttpClient,
-              private userService: UserService) {
+  constructor(private http: HttpClient) {
 
   }
 
@@ -32,10 +31,14 @@ export class AuthenticationService {
 
   public isLoggedIn(): boolean {
       const tokenData = this.getTokenData();
-      console.log(tokenData);
 
-      if (tokenData) {
-        let resp = tokenData.exp > Date.now() / 1000;
+
+
+      if (tokenData != null) {
+        let exp = JSON.parse(atob(tokenData.split('.')[1]));
+
+        let resp = exp.exp > Date.now() / 1000;
+        console.log(resp);
         return resp;
       } else {
         return false;
@@ -44,11 +47,10 @@ export class AuthenticationService {
 
   public getTokenData() {
     let payload;
+    let user = JSON.parse(localStorage.getItem('user'));
+    if (user != undefined) {
 
-    if (localStorage.getItem('tokenUser') == undefined) {
-      payload = localStorage.getItem('tokenUser').split('.')[1];
-      payload = window.atob(payload);
-      return JSON.parse(payload);
+      return user.token;
     } else {
       return null;
     }
@@ -59,21 +61,12 @@ export class AuthenticationService {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
     }
-    return this.http.post<any>(this.ROOT_URL+'/login', { email:username,password: password },options)
-      .pipe(map(result => {
-        // this.saveToken(result.token,username);
-
-        this.userService.getUser(username, result.token).subscribe(user =>{
-          localStorage.setItem('user', JSON.stringify(user));
-          console.log(user);
-        })
-
-      }));
+    return this.http.post<any>(this.ROOT_URL+'/login', { email:username, password:password },options);
 
   }
 
   logout() {
-    localStorage.removeItem('tokenUser');
-    localStorage.removeItem('userEmail');
+    localStorage.removeItem('user');
+
   }
 }
