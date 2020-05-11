@@ -25,11 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V11 Heroku">
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V12 Heroku">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/cli/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/cli/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/compiler-cli/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/compiler-cli/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589238883648</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="V12 Heroku">
+      <created>1589239293444</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589239293444</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +243,8 @@
     <MESSAGE value="V7" />
     <MESSAGE value="V8" />
     <MESSAGE value="V11 Heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="V11 Heroku" />
+    <MESSAGE value="V12 Heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="V12 Heroku" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="196" key="#Plugins" timestamp="1587966407790">
@@ -302,10 +307,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589238890449">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589239298134">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589238890449" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589239298134" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
