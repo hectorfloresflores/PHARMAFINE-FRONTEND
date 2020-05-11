@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,10 +289,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589090188444">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589229016445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589090188444" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589229016445" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
