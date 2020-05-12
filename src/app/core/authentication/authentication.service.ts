@@ -38,7 +38,7 @@ export class AuthenticationService {
         let exp = JSON.parse(atob(tokenData.split('.')[1]));
 
         let resp = exp.exp > Date.now() / 1000;
-        console.log(resp);
+
         return resp;
       } else {
         return false;
@@ -46,11 +46,10 @@ export class AuthenticationService {
   }
 
   public getTokenData() {
-    let payload;
-    let user = JSON.parse(localStorage.getItem('user'));
-    if (user != undefined) {
 
-      return user.token;
+
+    if (localStorage.user != 'undefined' && localStorage.user != undefined) {
+       return JSON.parse(localStorage.user).token;
     } else {
       return null;
     }
@@ -59,11 +58,14 @@ export class AuthenticationService {
   public login(username: string, password: string) {
 
     const options = {
-      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     }
     return this.http.post<any>(this.ROOT_URL+'/login', { email:username, password:password },options);
 
   }
+
 
   logout() {
     localStorage.removeItem('user');

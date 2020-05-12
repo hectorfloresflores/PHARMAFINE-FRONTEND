@@ -27,10 +27,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/3rdpartylicenses.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/webpage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/styles.3ff695c00d717f2d2a11.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/authentication/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/signin/signin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,22 +319,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="513" y="204" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1587615546386" />
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589259865790">
+    <state x="458" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589312775382">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589259865790" />
-    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589259865789">
+    <state x="458" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1589312775382" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589306340691">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589259865789" />
-    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589259865782">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589306340691" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589306340690">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589259865782" />
-    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589259865790">
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589306340690" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589306340689">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589259865790" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589306340689" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589306340690">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589306340690" />
     <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587699509069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -378,10 +383,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1589086829640" />
-    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1589075326783">
+    <state x="501" y="183" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589305465161">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589075326783" />
+    <state x="501" y="183" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.877@0.23.1440.877" timestamp="1589305465161" />
+    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1589315741781">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589315741781" />
     <state x="450" y="305" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589247395313">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

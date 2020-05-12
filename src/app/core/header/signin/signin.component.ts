@@ -36,7 +36,7 @@ export class SigninComponent implements OnInit {
   error = '';
   loggedIn = false;
   title = '';
-  user :User;
+  user;
 
   /**
    * Create parrams of class sign in modal.
@@ -92,12 +92,13 @@ export class SigninComponent implements OnInit {
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
-    if (localStorage.user != null) {
+    if (localStorage.user != 'undefined' && localStorage.user != undefined) {
 
-      this.loggedIn = this.authenticationService.isLoggedIn();
+       this.loggedIn = this.authenticationService.isLoggedIn();
+
       if(this.loggedIn) {
         this.user = JSON.parse(localStorage.getItem('user'));
-        console.log(this.user)
+
       }
     }
   }
@@ -138,7 +139,8 @@ export class SigninComponent implements OnInit {
   }
 
   googleAuth() {
-    window.location.href = 'https://pharmafine.herokuapp.com/auth/google/login';
+
+    window.location.href = 'http://localhost:5000/auth/google/login';
   }
 
 

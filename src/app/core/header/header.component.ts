@@ -11,17 +11,17 @@ import { User } from 'src/app/shared/models/User';
 
 })
 export class HeaderComponent implements OnInit{
-  user = null;
-  
-  ngOnInit(): void {
+  user;
 
-    this.user = JSON.parse(localStorage.getItem('user')); //para obter user local
+  ngOnInit(): void {
+    if (localStorage.user != 'undefined' && localStorage.user != undefined)
+    this.user = JSON.parse(localStorage.user); //para obter user local
   }
   @ViewChild(SigninComponent,{static: true} ) childModalSignIn: SigninComponent ;
   @ViewChild(RegisterComponent,{static: true} ) registerComponent: RegisterComponent ;
 
-  
-  
+
+
 
   openSignIn() {
     this.childModalSignIn.open();
