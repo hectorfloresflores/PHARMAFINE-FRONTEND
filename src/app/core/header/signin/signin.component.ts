@@ -137,5 +137,9 @@ export class SigninComponent implements OnInit {
     window.location.reload();
   }
 
+  googleAuth() {
+    window.location.href = 'http://pharmafine.herokuapp.com/auth/google/login';
+  }
+
 
 }
