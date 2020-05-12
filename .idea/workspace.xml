@@ -27,29 +27,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/core/pharma-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/account.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/shopping-bag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/images/alvaro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/images/wave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/bodyteen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/bodyteenP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/proteina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/proteina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es2015.1d7184d30f16c0b8611f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es5.1d7184d30f16c0b8611f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpage/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpage/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpage/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/webpage/polyfills-es2015.6fd7a269096fa8b40363.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/webpage/polyfills-es5.87354699036643f5acb1.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/webpage/runtime-es2015.69737fd31e4241d4961d.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/webpage/runtime-es5.69737fd31e4241d4961d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/styles.3ff695c00d717f2d2a11.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589244653773</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="V15">
+      <created>1589246608521</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589246608521</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,22 +308,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="513" y="204" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1587615546386" />
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589246362808">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589246571323">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589246362808" />
-    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589246362806">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589246571323" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589246571322">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589246362806" />
-    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589246362805">
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589246571322" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589246571321">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589246362805" />
-    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589246362807">
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589246571321" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589246571322">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589246362807" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589246571322" />
     <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587699509069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -369,10 +360,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589244665576">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589246612034">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589244665576" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589246612034" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -381,5 +372,9 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="365" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589075326783" />
+    <state x="450" y="305" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589247395313">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="450" y="305" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.877@0.23.1440.877" timestamp="1589247395313" />
   </component>
 </project>
