@@ -54,5 +54,18 @@
   "engines": {
     "node": "~12.14.0",
     "npm": "~6.13.4"
-  }
+  },
+  "description": "ANGULAR,",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorfloresflores/PHARMAFINE-FRONTEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hectorfloresflores/PHARMAFINE-FRONTEND/issues"
+  },
+  "homepage": "https://github.com/hectorfloresflores/PHARMAFINE-FRONTEND#readme"
 }

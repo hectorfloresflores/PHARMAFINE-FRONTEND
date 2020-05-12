@@ -14,9 +14,11 @@ import { ProductsComponent } from './modules/products/pages/products/products.co
 import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './core/header/signin/signin.component';
 import { RegisterComponent } from './core/header/register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {AuthenticationService} from "./core/authentication/authentication.service";
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthenticationService} from './core/authentication/authentication.service';
+import { UserComponent } from './modules/user/pages/user/user.component';
+import { AdminComponent } from './modules/admin/pages/admin/admin.component';
 // This app was made it with the folder structure expose in the link below...
 // https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 
@@ -28,7 +30,9 @@ import {AuthenticationService} from "./core/authentication/authentication.servic
     ProductsComponent,
     HeaderComponent,
     SigninComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent,
+    AdminComponent
   ],
     imports: [
         BrowserModule,
