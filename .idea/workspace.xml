@@ -25,11 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
     <configuration name="AuthenticationService.should get a token" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
@@ -267,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589334894301</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="V18">
+      <created>1589340284589</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1589340284589</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +318,8 @@
     <MESSAGE value="V15 Heroku Remove node modules" />
     <MESSAGE value="V15" />
     <MESSAGE value="V16" />
-    <option name="LAST_COMMIT_MESSAGE" value="V16" />
+    <MESSAGE value="V18" />
+    <option name="LAST_COMMIT_MESSAGE" value="V18" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="196" key="#Plugins" timestamp="1587966407790">
@@ -381,10 +386,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589299282011">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589340297106">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589299282011" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589340297106" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
