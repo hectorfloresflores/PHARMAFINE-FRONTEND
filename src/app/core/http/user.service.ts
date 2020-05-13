@@ -4,9 +4,7 @@ import {User} from "../../shared/models/User";
 import {catchError} from "rxjs/operators";
 import {throwError} from "rxjs";
 
-@Injectable({
-  providedIn: 'root'
-})
+
 @Injectable({ providedIn: 'root' })
 export class UserService {
   private ROOT_URL = 'https://pharmafine.herokuapp.com'

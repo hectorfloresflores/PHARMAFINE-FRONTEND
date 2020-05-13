@@ -1,0 +1,27 @@
+body{
+  background-color: rgb(226, 226, 226);
+  background-blend-mode: normal, lighten, soft-light;
+
+}
+
+html{
+  background-color: black;
+}
+
+
+.product-links:hover{
+  color: #A37E2C;
+  text-decoration:none;
+}
+
+.product-links{
+  color: white;
+}
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f106";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f107";
+}

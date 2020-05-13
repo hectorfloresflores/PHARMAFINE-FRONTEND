@@ -103,7 +103,14 @@ export class RegisterComponent implements OnInit {
 
 
     this.userService.register(user).subscribe(
-      data => console.log('success', data),
+      data =>  {
+        console.log('success', data)
+        this.router.navigate(['home'])
+          .then(() => {
+            window.location.reload();
+          });
+
+      },
       error => console.log('oops', error.error)
     );
   }
