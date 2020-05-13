@@ -4,18 +4,18 @@
     <nav class="navbar navbar-brand navbar-collapse justify-content-center">
         <div style="position: absolute;left: 0;">
             <div id="mySidenav" class="sidenav" [style.width]="IsToggleNav == true ? '250px' : '0px'">
-                <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">x</a>
-                <a href="/products" id="productos">Productos</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
+                <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">X</a>
+                <a href="#" routerLink="/home">Home</a>
+                <a href="#" id="productos" routerLink="/products">Productos</a>
                 <a href="#">Contact</a>
                 <hr>
 
+                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User Profile</a>
+                <a href="#" routerLink="/user-chat">User Chat</a>
+
+                <hr>
                 <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" routerLink="/admin">Admin</a>
                 <a href="#" routerLink="/admin-chat">Admin Chat</a>
-                <hr>
-                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User</a>
-                <a href="#" routerLink="/user-chat">User Chat</a>
             </div>
 
             <span class="burger-menu" >
