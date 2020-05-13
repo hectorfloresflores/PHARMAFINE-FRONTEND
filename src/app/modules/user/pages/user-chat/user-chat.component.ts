@@ -8,12 +8,14 @@ import { ChatService } from 'src/app/shared/services/chat.service';
 })
 export class UserChatComponent implements OnInit {
   currUser;
+  newRoom: String = "";
 
   user: String;
   room: String = "";
   messageText: String;
   messageArray: Array<{ user: String, message: String }> = [];
-  userArray: String[] = ["User1", "User2", "User3", "PepeChuy"]; //idealmente lo obtiene de base de datos
+  userArray: String[] = ["General", "User1", "User2", "User3", "PepeChuy"]; //idealmente lo obtiene de base de datos
+  roomArray: String[] = ["General", "Admin"];
   //urerArr = this.
 
   constructor(private _chatService: ChatService) {
@@ -33,7 +35,11 @@ export class UserChatComponent implements OnInit {
   }
 
   join() {
-    this.room = "Admin-"+this.user;
+    //this.newRoom = this.room;
+    if(this.room == 'Admin'){
+      this.room = this.currUser.email;
+    }
+    //this.room = "Admin-"+this.user;
     this._chatService.joinRoom({ user: this.user, room: this.room });
     this._chatService.sendUser({ user: this.user });
     //this.userArray.push(this.user)
@@ -46,7 +52,7 @@ export class UserChatComponent implements OnInit {
   }
 
   sendMessage() {
-    this._chatService.sendMessage({ user: this.user, room: this.room, message: this.messageText });
+    this._chatService.sendMessage({ user: "- " + this.user, room: this.room, message: this.messageText });
     this.messageText = "";
   }
 
@@ -55,8 +61,12 @@ export class UserChatComponent implements OnInit {
     this.currUser = JSON.parse(localStorage.user); //para obter user local
 
     this.userArray.push(this.currUser.email);
-
     console.log("Msgs:" + this.messageArray); //debugging
+
+    this.user = this.currUser.email;
+    this.room = "General";
+    this._chatService.joinRoom({ user: this.user, room: this.room });
+    console.log("user: " + this.user + " joined: " + this.room);
   }
 
   onKey(event) {

@@ -9,13 +9,14 @@ import { ChatService } from 'src/app/shared/services/chat.service';
 })
 export class AdminChatComponent implements OnInit {
   currUser;
+  newRoom: String;
 
   user: String;
   userTest: "yo";
   room: String;
   messageText: String;
   messageArray: Array<{ user: String, message: String }> = [];
-  userArray: String[] = ["User1", "User2", "User3", "PepeChuy"]; //idealmente lo obtiene de base de datos
+  userArray: String[] = ["General", "User1", "User2", "User3", "PepeChuy"]; //idealmente lo obtiene de base de datos
   //userArr = this._chatService;
 
 
@@ -47,7 +48,9 @@ export class AdminChatComponent implements OnInit {
   }
 
   join() {
-    this.user = "Admin";
+    //this.user = "Admin";
+    //this.newRoom = "Admin-" + this.room;
+    //this.room = "Admin-"+
     this._chatService.joinRoom({ user: this.user, room: this.room });
     this._chatService.sendUser({ user: this.user });
     //this.userArray.push(this.user)
@@ -60,13 +63,18 @@ export class AdminChatComponent implements OnInit {
   }
 
   sendMessage() {
-    this._chatService.sendMessage({ user: this.user, room: this.room, message: this.messageText });
+    this._chatService.sendMessage({ user: "+ " + this.user, room: this.room, message: this.messageText });
     this.messageText = "";
   }
 
   ngOnInit(): void {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
     this.currUser = JSON.parse(localStorage.user); //para obter user local
+
+    this.user = "Admin"
+    this.room = "General";
+    this._chatService.joinRoom({ user: this.user, room: this.room });
+    console.log("user: " + this.user + " room: " + this.room);
   }
 
   onKey(event) {

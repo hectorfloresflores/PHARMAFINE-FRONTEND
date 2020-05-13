@@ -8,83 +8,75 @@ border-color: gray;">
 
 <div class="container-fluid m-4">
 
-<div class="container">
-  <h3 class=" text-center">User Chat</h3>
-  <div class="messaging">
-    <div class="inbox_msg">
-      <div class="inbox_people">
-        <div class="headind_srch">
-          <div class="recent_heading">
-            <h4>Rooms</h4>
+  <div class="container">
+    <h3 class=" text-center">User Chat</h3>
+    <div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4>Rooms</h4>
+            </div>
           </div>
-        </div>
-        <div class="inbox_chat">
+          <div class="inbox_chat">
             <div class="chat_list">
-                <div class="chat_people">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="chat_ib">
-                    <h5>{{currUser.name}} {{currUser.lastname}}<span class="chat_date">(mi usario)</span></h5>
-                    <p>{{currUser.email}}</p>
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>{{currUser.name}} {{currUser.lastname}}<span class="chat_date">(mi usario)</span></h5>
+                  <p>{{currUser.email}}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat_list">
+
+              <div class="row">
+                <div class="col-sm-5">
+                  <label for="username">Mi user:</label>
+                  <select name="username" id="username" class="form-control" [(ngModel)]="user" disabled>
+                    <option value="{{user}}">{{user}}</option>
+                  </select>
+                </div>
+
+
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="roomInput">Chat:</label>
+                    <!-- <input type="text" [(ngModel)]="room" class="form-control" id="roomInput" disabled
+                    placeholder="Admin por default"> -->
+
+                    <select id="username" class="form-control" [(ngModel)]="room">
+                      <option *ngFor="let room of roomArray" value="{{room}}">{{room}}</option>
+                    </select>
                   </div>
                 </div>
+
               </div>
 
-          <div class="chat_list">
-
-            <div class="row">
-              <div class="col-sm-5">
-                <label for="username">Mi user: (de DB)</label>
-                <select name="username" id="username" class="form-control" [(ngModel)]="user">
-                  <option *ngFor="let user of userArray" value="{{user}}">{{user}}</option>
-                </select>
-              </div>
-
-
-              <div class="col-sm-5">
-                <div class="form-group">
-                  <label for="roomInput">Chat:</label>
-                  <input type="text" [(ngModel)]="room" class="form-control" id="roomInput" disabled
-                    placeholder="Admin por default">
+              <div class="col sm-2">
+                <div style="margin-top:19px;" class="pull-right">
+                  <button type="button" class="btn btn-primary mr-1" (click)="join()">Join</button>
+                  <button type="button" class="btn btn-dark" (click)="leave()">Leave</button>
                 </div>
               </div>
 
             </div>
 
-            <div class="col sm-2">
-              <div style="margin-top:19px;" class="pull-right">
-                <button type="button" class="btn btn-primary mr-1" (click)="join()">Join</button>
-                <button type="button" class="btn btn-dark" (click)="leave()">Leave</button>
-              </div>
-            </div>
-
-          </div>
-
-          
-
-          <div class="chat_list">
-            <div class="chat_people">
-              <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-              <div class="chat_ib">
-                <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                <p>Test, which is a new approach to have all solutions
-                  astrology under one roof.</p>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-      <div class="mesgs">
-        <div class="msg_history">
-          <div class="incoming_msg" *ngFor="let item of messageArray">
-            <div class="received_msg">
-              <div class="received_withd_msg">
-                <p>{{item.message}}</p>
-                <span class="time_date">{{item.user}}</span>
+        <div class="mesgs">
+          <div class="msg_history">
+            <div class="incoming_msg" *ngFor="let item of messageArray">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <span class="time_date">{{item.user}}:</span>
+                  <p>{{item.message}}</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--           <div class="outgoing_msg" *ngFor="let item of messageArray">
+            <!--           <div class="outgoing_msg" *ngFor="let item of messageArray">
             <div class="sent_msg">
               <p>{{item.message}}</p>
               <span class="time_date">{{item.user}}</span>
@@ -93,18 +85,19 @@ border-color: gray;">
 
 
 
-        </div>
-        <div class="type_msg">
-          <div class="input_msg_write">
-            <input type="text" class="write_msg form-control" placeholder="Type a message" (keyup)="onKey($event)"
-              [(ngModel)]="messageText" />
-            <button class="msg_send_btn" type="button" (click)="sendMessage()">></button>
+          </div>
+          <div class="type_msg">
+            <div class="input_msg_write">
+              <input type="text" class="write_msg form-control" placeholder="Type a message" (keyup)="onKey($event)"
+                [(ngModel)]="messageText" />
+              <button class="msg_send_btn" type="button" (click)="sendMessage()">></button>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
   </div>
-</div>
 
-<hr>
+  <hr>
