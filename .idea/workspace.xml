@@ -26,31 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
-      <change beforePath="$PROJECT_DIR$/dist/webpage/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/core/pharma-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/account.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/icons/shopping-bag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/images/alvaro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/images/wave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/bodyteen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/bodyteenP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/protein1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/proteina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/assets/images/products/proteina.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es2015.29f3510e7c7849584ae8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es2015.e036bf0c5dd506aa3e21.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es5.29f3510e7c7849584ae8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/main-es5.e036bf0c5dd506aa3e21.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/polyfills-es2015.504fb16f4aee469f5cf2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/polyfills-es5.84fba3ef5e5cbb74cd77.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/runtime-es2015.1eba213af0b233498d9d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/runtime-es5.1eba213af0b233498d9d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/webpage/styles.3ff695c00d717f2d2a11.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="c095975dc8d75e46278d503fdba4ab0e03651330" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +77,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager">
     <configuration name="AuthenticationService.should get a token" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
