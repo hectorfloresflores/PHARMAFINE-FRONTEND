@@ -23,6 +23,7 @@ import { AdminComponent } from './modules/admin/pages/admin/admin.component';
 import { UserChatComponent } from './modules/user/pages/user-chat/user-chat.component';
 import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.component';
 import { environment } from 'src/environments/environment.prod';
+import {ProductListComponent} from "./modules/products/components/product-list/product-list.component";
 // This app was made it with the folder structure expose in the link below...
 // https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 const config: SocketIoConfig = { url: environment.url , options: {}};
@@ -40,6 +41,7 @@ const config: SocketIoConfig = { url: environment.url , options: {}};
     AdminComponent,
     UserChatComponent,
     AdminChatComponent,
+    ProductListComponent,
   ],
     imports: [
         BrowserModule,

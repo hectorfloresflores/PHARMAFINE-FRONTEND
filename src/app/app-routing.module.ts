@@ -14,7 +14,7 @@ import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'products', component: ProductsComponent, canActivate: [AuthGuard]},
+  {path: 'products', component: ProductsComponent/*, canActivate: [AuthGuard]*/},
   {path: 'user', component: UserComponent},
   {path: 'user-chat', component: UserChatComponent},
   {path: 'admin', component: AdminComponent},
