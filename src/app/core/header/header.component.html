@@ -3,23 +3,25 @@
     <!-- Logo centered -->
     <nav class="navbar navbar-brand navbar-collapse justify-content-center">
         <div style="position: absolute;left: 0;">
-            <div id="mySidenav" class="sidenav" [style.width]="IsToggleNav == true ? '250px' : '0px'">
-                <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">X</a>
-                <a href="#" routerLink="/home" style="color: rgb(157, 135, 8);">Home</a>
-                <a href="#" id="productos" routerLink="/products">Productos</a>
+            <div id="mySidenav" class="sidenav" [style.width]=navSize>
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">X</a>
+                <a href="#" (click)="closeNav()" routerLink="/home" style="color: rgb(157, 135, 8);">Home</a>
+                <a href="#" id="productos" (click)="closeNav()" routerLink="/products">Productos</a>
                 <a href="https://www.facebook.com/pharmafine/">Contact</a>
                 <hr>
 
-                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User Profile</a>
-                <a href="#" routerLink="/user-chat">User Chat</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" (click)="closeNav()"
+                   routerLink="/user">User Profile</a>
+                <a href="" (click)="closeNav()" routerLink="/user-chat">User Chat.</a>
 
                 <hr>
-                <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" routerLink="/admin">Admin</a>
-                <a href="#" routerLink="/admin-chat">Admin Chat</a>
+                <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()"
+                   routerLink="/admin">Admin</a>
+                <a href="#" (click)="closeNav()" routerLink="/admin-chat" >Admin Chat</a>
             </div>
 
             <span class="burger-menu" style="color: rgb(157, 135, 8);">
-                <img src="../../../assets/images/icons/menu.png" width="25" height="" alt="" (click)="toggleNav()">
+                <img src="../../../assets/images/icons/menu.png" width="25" height="" alt="" (click)="openNav()">
             </span>
 
         </div>

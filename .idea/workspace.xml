@@ -19,14 +19,22 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:hector" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/hector" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +296,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="hector" />
+                        <option value="origin/hector" />
                       </list>
                     </value>
                   </entry>
@@ -334,22 +342,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1589312775382" />
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589335088916">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589400984008">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589335088916" />
-    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589335088914">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589400984008" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589400984007">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589335088914" />
-    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589335088913">
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589400984007" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589400984006">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589335088913" />
-    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589335088914">
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589400984006" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589400984007">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589335088914" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589400984007" />
     <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587699509069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -386,10 +394,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589340297106">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589342036328">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589340297106" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589342036328" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

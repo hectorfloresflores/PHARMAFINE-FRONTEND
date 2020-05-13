@@ -12,10 +12,38 @@ border-color: gray;">
 
     <div class="col-xl-3">
 
-      <h1 class="my-4">Shop Name</h1>
+
 
       <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
         <!-- Accordion card -->
+
+        <div class="card">
+
+          <!-- Card header -->
+          <div class="card-header" role="tab">
+            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse-search" aria-expanded="true">
+              <h5 class="mb-0">
+                Género &nbsp;<i class="fa fa-angle-down"></i>
+              </h5>
+            </a>
+          </div>
+
+          <!-- Card body -->
+          <div id="collapse-search" class="collapse"  data-parent="#accordionEx">
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control text-center" value="">
+                <div class="input-group-append">
+
+                  <button class="btn btn-outline-primary fa fa-search"></button>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         <div class="card">
 
           <!-- Card header -->
@@ -28,7 +56,7 @@ border-color: gray;">
           </div>
 
           <!-- Card body -->
-          <div id="collapse-gender" class="collapse show" role="tabpanel" data-parent="#accordionEx">
+          <div id="collapse-gender" class="collapse" role="tabpanel" data-parent="#accordionEx">
             <div class="card-body">
               <div class="custom-control custom-radio">
                 <input type="radio" class="custom-control-input" id="customCheck" name="example1">
@@ -58,7 +86,7 @@ border-color: gray;">
           </div>
 
           <!-- Card body -->
-          <div id="collapse-price" class="collapse show" role="tabpanel" data-parent="">
+          <div id="collapse-price" class="collapse" role="tabpanel" data-parent="">
             <div class="card-body">
 
                 <div class="">
@@ -79,66 +107,12 @@ border-color: gray;">
           </div>
         </div>
 
-        <div class="card">
 
-          <!-- Card header -->
-          <div class="card-header" role="tab" id="ph-brand">
-            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse-brand" aria-expanded="true">
-              <h5 class="mb-0">
-                Marca &nbsp;<i class="fa fa-angle-down"></i>
-              </h5>
-            </a>
-          </div>
 
-          <!-- Card body -->
-          <div id="collapse-brand" class="collapse show" role="tabpanel" data-parent="#accordionEx">
-            <div class="card-body">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control text-center" value="">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary fa fa-search"></button>
-                </div>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" value="" id="bodyteen">
-                <label class="custom-control-label" for="bodyteen">Body Teen</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="pisa">
-                <label class="custom-control-label" for="pisa">Pisa</label>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-
-          <!-- Card header -->
-          <div class="card-header" role="tab" id="">
-            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse-category" aria-expanded="true">
-              <h5 class="mb-0">
-                Categoria &nbsp;<i class="fa fa-angle-down"></i>
-              </h5>
-            </a>
-          </div>
-
-          <!-- Card body -->
-          <div id="collapse-category" class="collapse show" role="tabpanel" data-parent="#accordionEx">
-            <div class="card-body">
-
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="category-check" name="example2">
-                <label class="custom-control-label" for="category-check">Cara</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="category-check1" name="example2">
-                <label class="custom-control-label" for="category-check1">Cuerpo</label>
-              </div>
-            </div>
-          </div>
-        </div>
         <!-- Accordion card -->
       </div>
+
 
 
     </div>
@@ -146,7 +120,7 @@ border-color: gray;">
 
     <div class="col-xl-9">
 
-      <div class="row" style="margin-top: 50px;">
+      <div class="row">
 
         <div *ngFor="let pro of products" class="col-lg-4 col-md-6 mb-4">
           <app-product-list [product]="pro"></app-product-list>
