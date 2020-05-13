@@ -1,9 +1,14 @@
+<div class="jumbotron" style="background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(55, 55, 55) 50%, rgba(128,113,0,1) 100%);
+border-color: gray;">
+  <div class="container text-center">
+    <div>
+    </div>
+  </div>
+</div>
+
 <hr>
 <div class="container-fluid m-4">
-  <div class="row">
-    <h2>Admin chat</h2>
-    <hr>
-  </div>
+  
   <div class="row">
     <div class="col-sm-5">
       <div class="form-group">
@@ -30,12 +35,19 @@
   </div>
 
   <hr>
-  <div class="row m-2" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(55, 55, 55) 95%);
+  <div class="row m-2 overflow-auto" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(55, 55, 55) 95%);
   border-color: gray;">
     <div class="well" style="height:200px; padding:15px;">
-      <div *ngFor="let item of messageArray">
+      
+        <div class="container" *ngFor="let item of messageArray">
+            <span class="time-right">{{item.user}}: </span>
+            <br>
+            <p>{{item.message}}</p>
+          </div>
+
+      <!-- <div *ngFor="let item of messageArray">
         <span><strong>{{item.user}} : </strong> {{item.message}}</span>
-      </div>
+      </div> -->
     </div>
   </div>
   <hr>
@@ -48,5 +60,78 @@
       <button type="button" class="btn btn-success pull-right" (click)="sendMessage()">Send</button>
     </div>
   </div>
+
+
+  <div class="container">
+      <h3 class=" text-center">Admin Chat</h3>
+      <div class="messaging">
+        <div class="inbox_msg">
+          <div class="inbox_people">
+            <div class="headind_srch">
+              <div class="recent_heading">
+                <h4>Recent</h4>
+              </div>
+            </div>
+            <div class="inbox_chat">
+    
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Admin <span class="chat_date">Default</span></h5>
+                    <p>ds</p>
+                  </div>
+                </div>
+              </div>
+    
+              <select name="username" id="username" class="form-control" [(ngModel)]="user" aria-placeholder="sdsd">
+                <option *ngFor="let user of userArray" value="{{user}}">{{user}}</option>
+              </select>
+    
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mesgs">
+            <div class="msg_history">
+              <div class="incoming_msg" *ngFor="let item of messageArray">
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>{{item.message}}</p>
+                    <span class="time_date">{{item.user}}</span>
+                  </div>
+                </div>
+              </div>
+    
+              <!--           <div class="outgoing_msg" *ngFor="let item of messageArray">
+                <div class="sent_msg">
+                  <p>{{item.message}}</p>
+                  <span class="time_date">{{item.user}}</span>
+                </div>
+              </div> -->
+    
+    
+    
+            </div>
+            <div class="type_msg">
+              <div class="input_msg_write">
+                <input type="text" class="write_msg form-control" placeholder="Type a message" (keyup)="onKey($event)"
+                  [(ngModel)]="messageText" />
+                <button class="msg_send_btn" type="button" (click)="sendMessage()">></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
 </div>
 <hr>

@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user = null;
+  user;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.user = JSON.parse(localStorage.getItem('user'));
+    if (localStorage.user != 'undefined' && localStorage.user != undefined)
+    this.user = JSON.parse(localStorage.user); //para obter user local
   }
 
 }

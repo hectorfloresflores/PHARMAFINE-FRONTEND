@@ -8,6 +8,7 @@ import { ChatService } from 'src/app/shared/services/chat.service';
   providers: [ChatService]
 })
 export class AdminChatComponent implements OnInit {
+  currUser;
 
   user: String;
   userTest: "yo";
@@ -64,6 +65,8 @@ export class AdminChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.user != 'undefined' && localStorage.user != undefined)
+    this.currUser = JSON.parse(localStorage.user); //para obter user local
   }
 
   onKey(event) {

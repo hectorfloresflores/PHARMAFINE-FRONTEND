@@ -7,6 +7,7 @@ import { ChatService } from 'src/app/shared/services/chat.service';
   styleUrls: ['./user-chat.component.css']
 })
 export class UserChatComponent implements OnInit {
+  currUser;
 
   user: String;
   room: String = "";
@@ -50,6 +51,11 @@ export class UserChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.user != 'undefined' && localStorage.user != undefined)
+    this.currUser = JSON.parse(localStorage.user); //para obter user local
+
+    this.userArray.push(this.currUser.email);
+
     console.log("Msgs:" + this.messageArray); //debugging
   }
 
