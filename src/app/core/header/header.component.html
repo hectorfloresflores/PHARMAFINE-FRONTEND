@@ -11,8 +11,11 @@
                 <a href="#">Contact</a>
                 <hr>
 
-                <a href="#">Admin</a>
-                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'">User</a>
+                <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" routerLink="/admin">Admin</a>
+                <a href="#" routerLink="/admin-chat">Admin Chat</a>
+                <hr>
+                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User</a>
+                <a href="#" routerLink="/user-chat">User Chat</a>
             </div>
 
             <span class="burger-menu" >

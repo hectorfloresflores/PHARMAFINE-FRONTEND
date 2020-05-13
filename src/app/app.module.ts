@@ -8,20 +8,24 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
+import { SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
 
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { ProductsComponent } from './modules/products/pages/products/products.component';
 import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './core/header/signin/signin.component';
 import { RegisterComponent } from './core/header/register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {AuthenticationService} from "./core/authentication/authentication.service";
-import { ProductListComponent } from './modules/products/components/product-list/product-list.component';
-import { ProductFiltersComponent } from './modules/products/components/product-filters/product-filters.component';
-
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthenticationService} from './core/authentication/authentication.service';
+import { UserComponent } from './modules/user/pages/user/user.component';
+import { AdminComponent } from './modules/admin/pages/admin/admin.component';
+import { UserChatComponent } from './modules/user/pages/user-chat/user-chat.component';
+import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.component';
+import { environment } from 'src/environments/environment.prod';
 // This app was made it with the folder structure expose in the link below...
 // https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
+const config: SocketIoConfig = { url: environment.url , options: {}};
 
 @NgModule({
   declarations: [
@@ -32,8 +36,10 @@ import { ProductFiltersComponent } from './modules/products/components/product-f
     HeaderComponent,
     SigninComponent,
     RegisterComponent,
-    ProductListComponent,
-    ProductFiltersComponent
+    UserComponent,
+    AdminComponent,
+    UserChatComponent,
+    AdminChatComponent,
   ],
     imports: [
         BrowserModule,
@@ -41,6 +47,8 @@ import { ProductFiltersComponent } from './modules/products/components/product-f
         NgbModule,
         HttpClientModule,
         ReactiveFormsModule,
+        FormsModule,
+        SocketIoModule.forRoot(config)
     ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]
