@@ -7,7 +7,7 @@ import * as io from 'socket.io-client';
 })
 
 export class ChatService {
-  private socket = io('http://localhost:3000');
+  private socket = io('https://pharmafine.herokuapp.com');
   userArr: String[] = ["User1"]; 
 
   joinRoom(data) {
