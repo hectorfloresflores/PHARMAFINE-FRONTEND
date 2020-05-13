@@ -7,7 +7,7 @@
                 <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">X</a>
                 <a href="#" routerLink="/home" style="color: rgb(157, 135, 8);">Home</a>
                 <a href="#" id="productos" routerLink="/products">Productos</a>
-                <a href="#">Contact</a>
+                <a href="https://www.facebook.com/pharmafine/">Contact</a>
                 <hr>
 
                 <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User Profile</a>
@@ -24,7 +24,7 @@
 
         </div>
 
-        <a class="navbar-brand" >
+        <a class="navbar-brand" href="#" routerLink="/home">
             <img src="../../../assets/images/core/pharma-logo.png" id="ph_home" width="100" height="" alt="" />
         </a>
         <div style="position: absolute;right:0;" class="leftNav">
