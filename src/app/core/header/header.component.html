@@ -12,12 +12,12 @@
 
                 <a href="#" *ngIf="user!= undefined && user.role == 'USER'" (click)="closeNav()"
                    routerLink="/user">User Profile</a>
-                <a href="" (click)="closeNav()" routerLink="/user-chat">User Chat.</a>
+                <a href="" *ngIf="user!= undefined && user.role == 'USER'" (click)="closeNav()" routerLink="/user-chat">User Chat</a>
 
                 <hr>
-                <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()"
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()"
                    routerLink="/admin">Admin</a>
-                <a href="#" (click)="closeNav()" routerLink="/admin-chat" >Admin Chat</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()" routerLink="/admin-chat" >Admin Chat</a>
             </div>
 
             <span class="burger-menu" style="color: rgb(157, 135, 8);">

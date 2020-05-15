@@ -31,7 +31,15 @@ border-color: gray;">
                       <div class="mx-auto" style="width: 140px;">
                         <div class="d-flex justify-content-center align-items-center rounded"
                           style="height: 140px; background-color: rgb(233, 236, 239);">
-                          <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                          <!-- <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
+                          <div>
+                            
+                            <img *ngIf="!edited" src="{{user.url}}" alt=""
+                              class="img-thumbnail rounded mx-auto d-block">
+
+                            <img *ngIf="edited" src="{{userPic}}" alt="" class="img-thumbnail rounded mx-auto d-block">
+                          
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -45,13 +53,35 @@ border-color: gray;">
                               <input class="btn btn-dark" style="color: gold;" type="file">
                             </form>
                             <label></label> -->
-
+                            <!-- 
                             <input type="file" ng2FileSelect [uploader]="uploader" />
                             <button style="color: gold;" type="button" [disabled]="loading" (click)="upload()"
                               class="btn btn-dark"><i class="fa fa-fw fa-camera"></i>
                               <span>Cambiar imagen</span></button>
-                            <!-- `_app.component.html_` -->
+
+
+
+                            <form action="http://localhost:4000/upload_cloud" method="POST"
+                              enctype="multipart/form-data">
+                              <input type="file" name="image">
+                              <button>
+                                Guardar en Cloudinary
+                              </button>
+                            </form> 
+                          -->
+                            <div id="open-btn"></div>
+                            <div>
+                              <button style="color: gold;" id="upload_widget" (click)="onOpenUpload($event)"
+                                class="btn btn-dark">
+                                <i class="fa fa-fw fa-camera"></i>
+                                <span>Cambiar imagen</span>
+                              </button>
+                            </div>
+
+
+
                           </div>
+
                           <!-- <button class="btn btn-dark" style="color: gold;" type="button">
                             <i class="fa fa-fw fa-camera"></i>
                             <span>Cambiar imagen</span>
