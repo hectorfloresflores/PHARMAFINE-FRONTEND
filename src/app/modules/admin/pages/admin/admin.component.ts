@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
     this.user = JSON.parse(localStorage.user); //para obter user local
 
-    this.user.url = "https://res.cloudinary.com/pae2020/image/upload/v1589502064/mihgrswk3ad6aybtdbd3.jpg"; // iría user.url (directo de localStorage)
+    this.user.url = "https://res.cloudinary.com/pae2020/image/upload/v1589507446/users/vb5flhdhty3dyicoj68m.png"; // iría user.url (directo de localStorage)
 
     this.widget = (window as any).cloudinary.createUploadWidget(
       {

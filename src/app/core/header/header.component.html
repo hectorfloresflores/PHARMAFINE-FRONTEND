@@ -16,8 +16,8 @@
 
                 <hr>
                 <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()"
-                   routerLink="/admin">Admin</a>
-                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()" routerLink="/admin-chat" >Admin Chat</a>
+                [routerLink]="['/admin']" routerLinkActive="router-link-active">Admin</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()" [routerLink]="['/admin-chat']" routerLinkActive="router-link-active" >Admin Chat</a>
             </div>
 
             <span class="burger-menu" style="color: rgb(157, 135, 8);">
