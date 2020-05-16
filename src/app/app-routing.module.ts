@@ -8,6 +8,7 @@ import { AdminComponent } from './modules/admin/pages/admin/admin.component';
 import { UserComponent } from './modules/user/pages/user/user.component';
 import { UserChatComponent } from './modules/user/pages/user-chat/user-chat.component';
 import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.component';
+import {CheckoutComponent} from "./modules/checkout/pages/checkout/checkout.component";
 
 
 
@@ -15,10 +16,11 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'products', component: ProductsComponent/*, canActivate: [AuthGuard]*/},
-  {path: 'user', component: UserComponent},
-  {path: 'user-chat', component: UserChatComponent},
-  {path: 'admin', component: AdminComponent},
-  {path: 'admin-chat', component: AdminChatComponent}
+  {path: 'user', component: UserComponent/* , canActivate: [AuthGuard] */},
+  {path: 'user-chat', component: UserChatComponent/* , canActivate: [AuthGuard] */},
+  {path: 'admin', component: AdminComponent /*, canActivate: [AuthGuard] */},
+  {path: 'admin-chat', component: AdminChatComponent/* , canActivate: [AuthGuard] */},
+  {path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

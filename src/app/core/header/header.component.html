@@ -3,37 +3,39 @@
     <!-- Logo centered -->
     <nav class="navbar navbar-brand navbar-collapse justify-content-center">
         <div style="position: absolute;left: 0;">
-            <div id="mySidenav" class="sidenav" [style.width]="IsToggleNav == true ? '250px' : '0px'">
-                <a href="javascript:void(0)" class="closebtn" (click)="toggleNav()">x</a>
-                <a href="/products" id="productos">Productos</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+            <div id="mySidenav" class="sidenav" [style.width]=navSize>
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">X</a>
+                <a href="#" (click)="closeNav()" routerLink="/home" >Home</a>
+                <a href="#" id="productos" (click)="closeNav()" routerLink="/products">Productos</a>
+                <a href="https://www.facebook.com/pharmafine/">Contact</a>
                 <hr>
 
-                <a href="#"*ngIf="user!= undefined && user.role == 'ADMIN'" routerLink="/admin">Admin</a>
-                <a href="#" routerLink="/admin-chat">Admin Chat</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" (click)="closeNav()"
+                   routerLink="/user">User Profile</a>
+                <a href="" *ngIf="user!= undefined && user.role == 'USER'" (click)="closeNav()" routerLink="/user-chat">User Chat</a>
+
                 <hr>
-                <a href="#" *ngIf="user!= undefined && user.role == 'USER'" routerLink="/user">User</a>
-                <a href="#" routerLink="/user-chat">User Chat</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()"
+                [routerLink]="['/admin']" routerLinkActive="router-link-active">Admin</a>
+                <a href="#" *ngIf="user!= undefined && user.role == 'ADMIN'" (click)="closeNav()" [routerLink]="['/admin-chat']" routerLinkActive="router-link-active" >Admin Chat</a>
             </div>
 
-            <span class="burger-menu" >
-                <img src="../../../assets/images/icons/menu.png" width="25" height="" alt="" (click)="toggleNav()">
+            <span class="burger-menu" style="color: rgb(157, 135, 8);">
+                <img src="../../../assets/images/icons/menu.png" width="25" height="" alt="" (click)="openNav()">
             </span>
 
         </div>
 
-        <a class="navbar-brand" >
+        <a class="navbar-brand" href="#" routerLink="/home">
             <img src="../../../assets/images/core/pharma-logo.png" id="ph_home" width="100" height="" alt="" />
         </a>
         <div style="position: absolute;right:0;" class="leftNav">
-            <i style="font-style: normal">
+            <i routerLink="/checkout" style="font-style: normal">
                 <input type="image"  class="bag align-middle" src="../../../assets/images/icons/shopping-bag.png"
                     width="25" height="" alt="" />
                 <span class="align-text-top carrito reduce-span" id="bolsa">Mi bolsa</span>
             </i>
-            <i style="font-style: normal" (click)="openSignIn()">
+            <i style="font-style: normal" (click)="openSignIn()" >
                 <input type="image" class="account align-middle" src="../../../assets/images/icons/account.png"
                     width="25" height="" alt="" />
                 <span class="align-text-top cuenta reduce-span" id="cuenta"></span>

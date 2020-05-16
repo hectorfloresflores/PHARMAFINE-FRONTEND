@@ -6,132 +6,104 @@ border-color: gray;">
   </div>
 </div>
 
-<hr>
 <div class="container-fluid m-4">
-  
-  <div class="row">
-    <div class="col-sm-5">
-      <div class="form-group">
-        <label for="username">User: (default admin)</label>
-        <input type="text" [(ngModel)]="user" class="form-control" id="username" value="Admin" placeholder="Admin"
-          disabled>
-
-      </div>
-    </div>
-
-    <div class="col-sm-5">
-      <label for="roomInput">Chat: (obtendríamos de DB)</label>
-      <select name="roomInput" id="roomInput" class="form-control" [(ngModel)]="room">
-        <option *ngFor="let user of userArray" value="Admin-{{user}}">{{user}}</option>
-      </select>
-    </div>
-
-    <div class="col sm-2">
-      <div style="margin-top:19px;" class="pull-right">
-        <button type="button" class="btn btn-primary" (click)="join()">Join</button>
-        <button type="button" class="btn btn-dark" (click)="leave()">Leave</button>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-  <div class="row m-2 overflow-auto" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(55, 55, 55) 95%);
-  border-color: gray;">
-    <div class="well" style="height:200px; padding:15px;">
-      
-        <div class="container" *ngFor="let item of messageArray">
-            <span class="time-right">{{item.user}}: </span>
-            <br>
-            <p>{{item.message}}</p>
-          </div>
-
-      <!-- <div *ngFor="let item of messageArray">
-        <span><strong>{{item.user}} : </strong> {{item.message}}</span>
-      </div> -->
-    </div>
-  </div>
-  <hr>
-  
-  <div class="row">
-    <div class="col-sm-10">
-      <input type="text" class="form-control" (keyup)="onKey($event)" [(ngModel)]="messageText">
-    </div>
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-success pull-right" (click)="sendMessage()">Send</button>
-    </div>
-  </div>
-
 
   <div class="container">
-      <h3 class=" text-center">Admin Chat</h3>
-      <div class="messaging">
-        <div class="inbox_msg">
-          <div class="inbox_people">
-            <div class="headind_srch">
-              <div class="recent_heading">
-                <h4>Recent</h4>
-              </div>
-            </div>
-            <div class="inbox_chat">
-    
-              <div class="chat_list">
-                <div class="chat_people">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="chat_ib">
-                    <h5>Admin <span class="chat_date">Default</span></h5>
-                    <p>ds</p>
-                  </div>
-                </div>
-              </div>
-    
-              <select name="username" id="username" class="form-control" [(ngModel)]="user" aria-placeholder="sdsd">
-                <option *ngFor="let user of userArray" value="{{user}}">{{user}}</option>
-              </select>
-    
-              <div class="chat_list">
-                <div class="chat_people">
-                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                  <div class="chat_ib">
-                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                    <p>Test, which is a new approach to have all solutions
-                      astrology under one roof.</p>
-                  </div>
-                </div>
-              </div>
+    <h3 class=" text-center">Admin Chat - {{room}}</h3>
+    <div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4 style="color: rgb(157, 135, 8);">Chats</h4>
             </div>
           </div>
-          <div class="mesgs">
-            <div class="msg_history">
-              <div class="incoming_msg" *ngFor="let item of messageArray">
-                <div class="received_msg">
-                  <div class="received_withd_msg">
-                    <p>{{item.message}}</p>
-                    <span class="time_date">{{item.user}}</span>
+          <div class="inbox_chat">
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>{{currUser.name}} {{currUser.lastname}}<span class="chat_date"
+                      style="color: rgb(157, 135, 8);">Admin</span></h5>
+                  <p>{{currUser.email}}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat_list">
+
+              <div class="row">
+                <div class="col-sm-5">
+                  <label for="username">Mi user:</label>
+                  <select name="username" id="username" class="form-control" [(ngModel)]="user" disabled>
+                    <option value="{{user}}">{{user}}</option>
+                  </select>
+                </div>
+
+
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="roomInput">Chat: <small><small><small>(user-email)</small></small></small></label>
+                    <select id="username" class="form-control" [(ngModel)]="room">
+                      <option *ngFor="let room of userArray" value="{{room}}">{{room}}</option>
+                    </select>
+
+                    <input name="roomInput" id="roomInput" class="form-control" [(ngModel)]="room" value="General"
+                      placeholder="Escribe email">
+
                   </div>
                 </div>
-              </div>
-    
-              <!--           <div class="outgoing_msg" *ngFor="let item of messageArray">
-                <div class="sent_msg">
-                  <p>{{item.message}}</p>
-                  <span class="time_date">{{item.user}}</span>
+
+                <div class="col sm-2">
+                  <div style="margin-top:19px;" class="pull-right">
+                    <button type="button" class="btn btn-primary mr-1" (click)="join()">Entrar</button>
+                    <button type="button" class="btn btn-dark" (click)="leave()">Salir</button>
+                  </div>
                 </div>
-              </div> -->
-    
-    
-    
-            </div>
-            <div class="type_msg">
-              <div class="input_msg_write">
-                <input type="text" class="write_msg form-control" placeholder="Type a message" (keyup)="onKey($event)"
-                  [(ngModel)]="messageText" />
-                <button class="msg_send_btn" type="button" (click)="sendMessage()">></button>
+
               </div>
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mesgs">
+          <div class="msg_history">
+            <div class="incoming_msg" *ngFor="let item of messageArray">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <span class="time_date">{{item.user}}:</span>
+                  <p>{{item.message}}</p>
+                </div>
+              </div>
+            </div>
+
+            <!--           <div class="outgoing_msg" *ngFor="let item of messageArray">
+              <div class="sent_msg">
+                <p>{{item.message}}</p>
+                <span class="time_date">{{item.user}}</span>
+              </div>
+            </div> -->
+
+
+
+          </div>
+          <div class="type_msg">
+            <div class="input_msg_write">
+              <input type="text" class="write_msg form-control" placeholder="Escribe un mensaje" (keyup)="onKey($event)"
+                [(ngModel)]="messageText" />
+              <button class="msg_send_btn" type="button" (click)="sendMessage()">></button>
             </div>
           </div>
         </div>
-    
       </div>
+
     </div>
-</div>
-<hr>
+
+
+  </div>
+  <hr>

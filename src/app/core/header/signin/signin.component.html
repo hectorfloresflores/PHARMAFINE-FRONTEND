@@ -10,14 +10,16 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label>Username</label>
-        <input type="text" formControlName="username" placeholder="Introduce tu correo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <input type="text" formControlName="username" placeholder="Introduce tu correo" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
           <div *ngIf="f.username.errors.required">Escribe tu correo</div>
         </div>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" formControlName="password" class="form-control" placeholder="Introduce tu contraseña" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <input type="password" formControlName="password" class="form-control" placeholder="Introduce tu contraseña"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
         <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
           <div *ngIf="f.password.errors.required">Escribe tu contraseña</div>
         </div>
@@ -28,32 +30,34 @@
   </div>
   <div *ngIf="loggedIn" class="modal-body">
 
-      <div class="form-group">
-        <label >Nombre</label>
-        <input disabled class="form-control"  placeholder="{{user.name}}" />
-      </div>
-      <div class="form-group">
-        <label >Correo</label>
-        <input disabled class="form-control"  placeholder="{{user.email}}" />
-      </div>
-      <div class="form-group">
-        <label >Apellidos</label>
-        <input disabled class="form-control"  placeholder="{{user.lastname}}" />
-      </div>
+    <div class="form-group">
+      <label>Nombre</label>
+      <input disabled class="form-control" placeholder="{{user.name}}" />
+    </div>
+    <div class="form-group">
+      <label>Correo</label>
+      <input disabled class="form-control" placeholder="{{user.email}}" />
+    </div>
+    <div class="form-group">
+      <label>Apellidos</label>
+      <input disabled class="form-control" placeholder="{{user.lastname}}" />
+    </div>
 
   </div>
   <div *ngIf="!loggedIn" class="modal-footer">
-    <a class="btn btn-outline-dark mr-auto" href="javascript: void(0)" (click)="googleAuth()" role="button" style="text-transform:none">
+    <a class="btn btn-outline-dark mr-auto" href="javascript: void(0)" (click)="googleAuth()" role="button"
+      style="text-transform:none">
       <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
-           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
       Entrar con Google
     </a>
-    <button type="button"  class="btn btn-outline-success" role="button" (click)="openRegister()">Registrarse</button>
+    <button type="button" class="btn btn-outline-success" role="button" (click)="openRegister()">Registrarse</button>
   </div>
   <div *ngIf="loggedIn" class="modal-footer">
-    <a (click)="logOut()" href="javascript: void(0)" class="btn btn-outline-danger mr-auto"
-       role="button">Cerrar sesión</a>
-    <a href=""  data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal"
-       role="button">Editar mi perfil</a>
+    <a (click)="logOut()" href="javascript: void(0)" class="btn btn-outline-danger mr-auto" role="button">Cerrar
+      sesión</a>
+    <a *ngIf="user!= undefined && user.role == 'USER'" [routerLink]="['/user']" routerLinkActive="router-link-active" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Editar mi
+      perfil</a>
+    <a *ngIf="user!= undefined && user.role == 'ADMIN'" [routerLink]="['/admin']" routerLinkActive="router-link-active" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Admin</a>
   </div>
 </ng-template>

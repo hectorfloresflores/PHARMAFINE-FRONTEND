@@ -6,17 +6,18 @@
         <p href="#">{{product.name}}</p>
       </h4>
       <h5>${{product.price}}</h5>
+      <h5>Existencia: {{product.stock}}</h5>
       <p class="card-text">{{product.description}}
       </p>
       <div class="row">
         <div class="col-sm-4">
-          <a class="fa fa-heart fa-lg product-links" href=""></a>
+          <a class="fa fa-heart fa-lg product-links" href="" ></a>
         </div>
         <div class="col-sm-4">
           <a class="fa fa-eye fa-lg product-links" href=""></a>
         </div>
         <div class="col-sm-4">
-          <a class="fa fa-plus fa-lg product-links" href=""></a>
+          <a class="fa fa-plus fa-lg product-links" href="javascript:void(0)" (click)="addProduct(product.id)"></a>
         </div>
       </div>
     </div>

@@ -19,22 +19,42 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:hector" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/hector" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
+
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-=======
+
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V18">
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
->>>>>>> Stashed changes
+
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V18">
+      <change afterPath="$PROJECT_DIR$/src/app/modules/checkout/pages/checkout/checkout.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/checkout/pages/checkout/checkout.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/checkout/pages/checkout/checkout.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/checkout/pages/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/http/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/http/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/http/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/http/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/home/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/components/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/components/product-list/product-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/components/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/components/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/products/pages/products/products.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/models/User.ts" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +99,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
     <configuration name="AuthenticationService.should get a token" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
@@ -272,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589334894301</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="V18">
+      <created>1589340284589</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1589340284589</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +317,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="hector" />
+                        <option value="origin/hector" />
                       </list>
                     </value>
                   </entry>
@@ -319,7 +347,8 @@
     <MESSAGE value="V15 Heroku Remove node modules" />
     <MESSAGE value="V15" />
     <MESSAGE value="V16" />
-    <option name="LAST_COMMIT_MESSAGE" value="V16" />
+    <MESSAGE value="V18" />
+    <option name="LAST_COMMIT_MESSAGE" value="V18" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="196" key="#Plugins" timestamp="1587966407790">
@@ -334,24 +363,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1589312775382" />
-<<<<<<< Updated upstream
+
     <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589335088916">
+
+    <state x="470" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589569697573">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589335088916" />
-    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589335088914">
+    <state x="470" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1589569697573" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589400984008">
+
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589335088914" />
-    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589335088913">
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589400984008" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589400984007">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589335088913" />
-    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589335088914">
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589400984007" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589400984006">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589400984006" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589400984007">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589335088914" />
-=======
     <state x="470" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589569697573">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -372,7 +407,9 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589652440954" />
->>>>>>> Stashed changes
+
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589400984007" />
+
     <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587699509069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -405,14 +442,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1419" height="222" key="GridCell.Tab.4.right/0.23.1440.877@0.23.1440.877" timestamp="1587686405338" />
-    <state x="279" y="156" key="SettingsEditor" timestamp="1588007756053">
+    <state x="279" y="156" key="SettingsEditor" timestamp="1589419276912">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588007756052" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589299282011">
+    <state x="279" y="156" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1589419276912" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1589342036328">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589299282011" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1589342036328" />
     <state x="542" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589086829640">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -421,10 +458,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="501" y="183" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.877@0.23.1440.877" timestamp="1589305465161" />
-    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1589322939050">
+    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1589569679313">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589322939050" />
+    <state x="365" y="224" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589569679313" />
     <state x="450" y="305" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589247395313">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

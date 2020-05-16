@@ -11,10 +11,8 @@ border-color: gray;">
     <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
       <div class="card p-3">
         <div class="e-navlist e-navlist--active-bg">
-          <ul class="nav">
-            <li><a style="color: rgb(157, 135, 8);" data-toggle="tab" href="#home">Mi bolsa</a></li> <br>
-            <li><a style="color: rgb(157, 135, 8);" data-toggle="tab" href="#home">chat</a></li>
-          </ul>
+          <a style="color: rgb(157, 135, 8);" data-toggle="tab" href="#home">Mi bolsa</a> <br>
+          <a style="color: rgb(157, 135, 8);" data-toggle="tab" href="#" routerLink="/user-chat">chat</a>
         </div>
       </div>
     </div>
@@ -33,87 +31,152 @@ border-color: gray;">
                       <div class="mx-auto" style="width: 140px;">
                         <div class="d-flex justify-content-center align-items-center rounded"
                           style="height: 140px; background-color: rgb(233, 236, 239);">
-                          <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                          <!-- <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
+                          <div>
+
+                            <img *ngIf="!edited" src="{{user.url}}" alt=""
+                              class="img-thumbnail rounded mx-auto d-block">
+
+                            <img *ngIf="edited" src="{{userPic}}" alt="" class="img-thumbnail rounded mx-auto d-block">
+
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                       <div class="text-center text-sm-left mb-2 mb-sm-0">
-                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Juanito Pérez</h4>
-                        <p class="mb-0">@eljuan123</p>
+                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{user.name}} {{user.lastname}}</h4>
+                        <p class="mb-0">{{user.email}}</p>
                         <div class="mt-2">
-                          <button class="btn btn-dark" style="color: gold;" type="button">
+                          <div>
+                            <!-- <form action="" method="post" enctype="multipart/form-data">
+                              <input class="btn btn-dark" style="color: gold;" type="file">
+                            </form>
+                            <label></label> -->
+                            <!-- 
+                            <input type="file" ng2FileSelect [uploader]="uploader" />
+                            <button style="color: gold;" type="button" [disabled]="loading" (click)="upload()"
+                              class="btn btn-dark"><i class="fa fa-fw fa-camera"></i>
+                              <span>Cambiar imagen</span></button>
+
+
+
+                            <form action="http://localhost:4000/upload_cloud" method="POST"
+                              enctype="multipart/form-data">
+                              <input type="file" name="image">
+                              <button>
+                                Guardar en Cloudinary
+                              </button>
+                            </form> 
+                          -->
+                            <div id="open-btn"></div>
+                            <div>
+                              <button style="color: gold;" id="upload_widget" (click)="onOpenUpload($event)"
+                                class="btn btn-dark">
+                                <i class="fa fa-fw fa-camera"></i>
+                                <span>Cambiar imagen</span>
+                              </button>
+                            </div>
+
+
+
+                          </div>
+
+                          <!-- <button class="btn btn-dark" style="color: gold;" type="button">
                             <i class="fa fa-fw fa-camera"></i>
                             <span>Cambiar imagen</span>
-                          </button>
+                          </button> -->
                         </div>
+
                       </div>
                       <div class="text-center text-sm-right">
                         <span class="badge badge-secondary" style="color: gold;">Usuario</span>
                         <div class="text-muted"><small></small></div>
+                        <span *ngIf="user.isVerified" class="badge badge-secondary"
+                          style="color: gold;">Verificado</span>
                       </div>
                     </div>
                   </div>
 
                   <div>
-                        <hr>
-                        <h5>Datos personales:</h5>
-                        <!-- <form class="form" novalidate=""> -->
-                        <p>Ojo: aún no conocemos qué datos manejamos o cómo funcionarán los
-                          features.</p> <br>
+                    <hr>
+                    <h5>Datos personales:</h5>
+                    <!-- <form class="form" novalidate=""> -->
+                    <span>{{editUser | json}}</span>
+                    <br>
+                    <div class="row">
+                      <div class="col">
                         <div class="row">
                           <div class="col">
-                            <div class="row">
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Nombre</label>
-                                  <input class="form-control" type="text" name="name" placeholder="Juanito Pérez"
-                                    value={{user.name}}>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Apellido</label>
-                                  <input class="form-control" type="text" name="username" placeholder="eljuan123.s"
-                                    value={{user.lastname}}>
-                                </div>
-                              </div>
+                            <div class="form-group">
+                              <label>Nombre</label>
+                              <input class="form-control" type="text" name="name" placeholder="{{user.name}}"
+                                value={{user.name}} [(ngModel)]="editUser.name">
                             </div>
-                            <div class="row">
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Correo</label>
-                                  <input class="form-control" type="text" placeholder="user@example.com"
-                                    value={{user.email}}>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col mb-3">
-                                <div class="form-group">
-                                  <label>Rol</label>
-                                  <input class="form-control" type="text" placeholder="My Role" value={{user.role}}>
-                                </div>
-                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Apellido</label>
+                              <input class="form-control" type="text" name="username" placeholder="{{user.lastname}}"
+                                value={{user.lastname}} [(ngModel)]="editUser.lastname">
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-12 col-sm-6 mb-3">
-                            <div class="mb-2"><b>Cambiar contraseña</b></div>
-                            <div class="row">
-                              <div class="col">
-                                <div class="form-group">
-                                  <label>Contraseña actual</label>
-                                  <input class="form-control" type="password" placeholder="••••••">
-                                </div>
-                              </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Correo</label>
+                              <input disabled class="form-control" type="text" placeholder="{{user.email}}"
+                                value={{user.email}}>
                             </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col mb-3">
+                            <div class="form-group">
+                              <label>Rol</label>
+                              <input disabled class="form-control" type="text" placeholder="My Role"
+                                value={{user.role}}>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-6 mb-3">
+                        <div class="mb-2"><b>Cambiar contraseña</b></div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Contraseña actual</label>
+                              <input disabled class="form-control" type="password" placeholder="(contraseñas cifradas)">
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-12 col-sm-5 offset-sm-1 mb-3">
+                        <div class="mb-2"><b><br></b></div>
+                        <div class="row">
+                          <div class="col">
+
+                            <!-- <label>Configuración de correo</label>
+                              <div class="custom-controls-stacked px-2">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="notifications-news">
+                                  <label class="custom-control-label" for="notifications-news">Newsletter</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="notifications-offers">
+                                  <label class="custom-control-label" for="notifications-offers">Ofertas</label>
+                                </div>
+                              </div> -->
+
                             <div class="row">
                               <div class="col">
                                 <div class="form-group">
                                   <label>Nueva contraseña</label>
-                                  <input class="form-control" type="password" placeholder="••••••">
+                                  <input disabled class="form-control" type="password" placeholder="••••••">
                                 </div>
                               </div>
                             </div>
@@ -122,39 +185,23 @@ border-color: gray;">
                                 <div class="form-group">
                                   <label>Confirmar<span class="d-none d-xl-inline">
                                       contraseña</span></label>
-                                  <input class="form-control" type="password" placeholder="••••••"></div>
+                                  <input disabled class="form-control" type="password" placeholder="••••••"></div>
                               </div>
                             </div>
-                          </div>
-                          <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                            <div class="mb-2"><b>Mantenernos en contacto</b></div>
-                            <p>Ojo: aún no conocemos qué datos manejamos o cómo
-                              funcionarán los features.</p>
-                            <div class="row">
-                              <div class="col">
-                                <label>Configuración de correo</label>
-                                <div class="custom-controls-stacked px-2">
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="notifications-news">
-                                    <label class="custom-control-label" for="notifications-news">Newsletter</label>
-                                  </div>
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="notifications-offers">
-                                    <label class="custom-control-label" for="notifications-offers">Ofertas</label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+
+
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col d-flex justify-content-end">
-                            <button class="btn btn-dark" type="submit" style="color: gold;">Guardar
-                              cambios</button>
-                          </div>
-                        </div>
-                        <!-- </form> -->
                       </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-end">
+                        <button class="btn btn-dark" type="submit" style="color: gold;" (click)="submitEdit()">Guardar
+                          cambios</button>
+                      </div>
+                    </div>
+                    <!-- </form> -->
+                  </div>
 
 
 

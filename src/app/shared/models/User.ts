@@ -1,6 +1,6 @@
 export class User {
   isVerified: boolean;
-  checkout: [];
+  checkout: string[];
   name: string;
   email: string;
   password: string;
