@@ -43,7 +43,15 @@ export class AdminChatComponent implements OnInit {
         this.messageArray.push(data);
         if (data.user != "+ Admin" && !this.userArray.includes(data.user.replace("- ", ""))) {
           this.userArray.push(data.user.replace("- ", ""));
+          console.log(data.user, data.message);
         };
+
+        if (data.message.includes("has left this room.")){
+          console.log("left!");
+          var filteredArr = this.userArray.filter(function(e) { return e !== data.user.replace("- ", "") })
+
+          this.userArray = filteredArr;
+        }
       });
     console.log(this.messageArray);
 
