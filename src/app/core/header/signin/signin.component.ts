@@ -140,7 +140,7 @@ export class SigninComponent implements OnInit {
 
   googleAuth() {
 
-    window.location.href = 'http://localhost:5000/auth/google/login';
+    window.location.href = 'https://pharmafine.herokuapp.com/auth/google/login';
   }
 
 

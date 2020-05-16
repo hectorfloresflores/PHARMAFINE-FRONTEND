@@ -28,6 +28,7 @@ export class CheckoutComponent implements OnInit {
     if (localStorage.user != undefined && localStorage.user != 'undefined') {
       let token = JSON.parse(localStorage.user).token;
       let email = JSON.parse(localStorage.user).email;
+      email = JSON.parse(localStorage.user).id == undefined ? email : JSON.parse(localStorage.user).id;
       this.map = new Map();
       this.userService.getUser(email, token).subscribe(user => {
         user.checkout.forEach(item =>{
@@ -52,6 +53,7 @@ export class CheckoutComponent implements OnInit {
     if (localStorage.user != undefined && localStorage.user != 'undefined') {
       let token = JSON.parse(localStorage.user).token;
       let email = JSON.parse(localStorage.user).email;
+      email = JSON.parse(localStorage.user).id == undefined ? email : JSON.parse(localStorage.user).id;
       this.map.set(id,parseInt(this.map.get(id))+1)
       this.userService.addToCheckout(token, email,id,+1).subscribe(r =>{
         this.userService.getCheckout(token, email).subscribe(res =>{
@@ -73,7 +75,11 @@ export class CheckoutComponent implements OnInit {
     if (localStorage.user != undefined && localStorage.user != 'undefined') {
       let token = JSON.parse(localStorage.user).token;
       let email = JSON.parse(localStorage.user).email;
-      this.map.set(id,parseInt(this.map.get(id))-1)
+      email = JSON.parse(localStorage.user).id == undefined ? email : JSON.parse(localStorage.user).id;
+      if (parseInt(this.map.get(id)) > 1) {
+        this.map.set(id,parseInt(this.map.get(id))-1)
+      }
+
       this.userService.addToCheckout(token, email,id,-1).subscribe(r =>{
         console.log(r);
         this.userService.getCheckout(token, email).subscribe(res =>{
@@ -94,7 +100,7 @@ export class CheckoutComponent implements OnInit {
     if (localStorage.user != undefined && localStorage.user != 'undefined') {
       let token = JSON.parse(localStorage.user).token;
       let email = JSON.parse(localStorage.user).email;
-
+      email = JSON.parse(localStorage.user).id == undefined ? email : JSON.parse(localStorage.user).id;
 
 
       // @ts-ignore

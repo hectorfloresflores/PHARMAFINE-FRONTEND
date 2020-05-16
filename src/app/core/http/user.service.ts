@@ -1,15 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {User} from "../../shared/models/User";
-import {catchError} from "rxjs/operators";
-import {throwError} from "rxjs";
+
 import {Product} from "../../shared/models/Product";
-import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
-import { User } from "../../shared/models/User";
-import { catchError } from "rxjs/operators";
-import { throwError } from "rxjs";
-import { stringify } from 'querystring';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+
+
 
 
 @Injectable({ providedIn: 'root' })
@@ -91,8 +86,8 @@ export class UserService {
       })
     };
 
-    const body = { 
-      "url": newUrl 
+    const body = {
+      "url": newUrl
     };
 
     console.log(body, options)

@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
     if (localStorage.user != undefined && localStorage.user != 'undefined') {
       let token = JSON.parse(localStorage.user).token;
       let email = JSON.parse(localStorage.user).email;
-
+      email = JSON.parse(localStorage.user).id == undefined ? email : JSON.parse(localStorage.user).id;
 
        this.userService.addToCheckout(token, email, productId, 1)
          .subscribe(r =>{
@@ -30,7 +30,7 @@ export class ProductListComponent implements OnInit {
          })
 
     } else {
-      alert('no');
+      alert('Primero inica sesión');
     }
 
   }
