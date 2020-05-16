@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../../../../core/http/user.service';
+import { UserService } from '../../../../core/http/user.service';
 
 @Component({
   selector: 'app-admin',
@@ -18,14 +18,14 @@ export class AdminComponent implements OnInit {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
       this.user = JSON.parse(localStorage.user); //para obter user local
 
-    this.user.url = "https://res.cloudinary.com/pae2020/image/upload/v1589507446/users/vb5flhdhty3dyicoj68m.png"; // iría user.url (directo de localStorage)
+    // iría user.url (directo de localStorage)
 
     this.widget = (window as any).cloudinary.createUploadWidget(
       {
         cloudName: 'pae2020',
         uploadPreset: 'ubmahvyp',
         showPoweredBy: false,
-        clientAllowedFormats: ["png", "gif", "jpeg"],
+        //clientAllowedFormats: ["png", "gif", "jpeg", "jpg"],
         theme: 'minimal',
         cropping: true,
         croppingAspectRatio: 1.0,
@@ -33,27 +33,30 @@ export class AdminComponent implements OnInit {
       },
       (error, result) => {
         if (!error && result && result.event === 'success') {
-          console.log('Subida! secure url: ', result.info.secure_url);
+          console.log('Subida a cloud! nuevo URL: ', result.info.secure_url);
           this.userPic = result.info.secure_url;
           this.edited = true;
 
-          console.log(this.user.email, result.info.secure_url, this.user.token);
-          this.userService.update(this.user.email, result.info.secure_url, this.user.token).subscribe(user =>{
-            localStorage.setItem('userUpdated',JSON.stringify(user));
-            console.log("user updated!");
+          // hacer patch a db aquí, user.url = result.info.secure_url;
+          console.log("user: " + this.user.email + " nuevo URL: " + result.info.secure_url + " token: " + this.user.token);
+          //localStorage.setItem(user.url, result.info.secure_url);
+          //localStorage.user.url = "aaaaaa";
+
+          this.userService.updateURL(this.user.email, this.user.token, result.info.secure_url).subscribe(user => {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+            console.log("url updated local + db!");
+
           })
-          // hacer post a db aquí, user.url = result.info.secure_url;
-          /* ###
-          PATCH http://localhost:5000/users
-          Content - Type: application / json
-          x - auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmxvcy5mbG9nYXJzQGdtYWlsLmNvbSIsImlhdCI6MTU4OTU2MDg3MCwiZXhwIjoxNTg5NTY0NDcwfQ.aMOmIT91fXBr4YhgvXQCfjPUJxSxaSDre - w43nVx9X4
-          email: 108831227522248479954
+          console.log("url updated !!"); //funciona hasta aquí...
+          //vovler a hacer get para actualizar user en localStorage con datos nuevos de db
+          this.userService.getUser(this.user.email, this.user.token).subscribe(user => {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+            console.log("Nuevos user obtenido!");
+            //listo
+          })
 
-          {
-            "url": "www"
-          } */
-
-          
         }
       }
     );

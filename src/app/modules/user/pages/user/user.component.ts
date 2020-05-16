@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../../core/http/user.service';
 
 @Component({
   selector: 'app-user',
@@ -11,21 +12,20 @@ export class UserComponent implements OnInit {
   userPic = "";
   private widget: any = null;
 
-
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
       this.user = JSON.parse(localStorage.user); //para obter user local
 
-    this.user.url = "https://res.cloudinary.com/pae2020/image/upload/v1589502064/mihgrswk3ad6aybtdbd3.jpg"; // iría user.url (directo de localStorage)
+    // iría user.url (directo de localStorage)
 
     this.widget = (window as any).cloudinary.createUploadWidget(
       {
         cloudName: 'pae2020',
         uploadPreset: 'ubmahvyp',
         showPoweredBy: false,
-        clientAllowedFormats: ["png","gif", "jpeg"],
+        //clientAllowedFormats: ["png", "gif", "jpeg", "gpg"],
         theme: 'minimal',
         cropping: true,
         croppingAspectRatio: 1.0,
@@ -37,7 +37,26 @@ export class UserComponent implements OnInit {
           this.userPic = result.info.secure_url;
           this.edited = true;
 
-          // hacer post a db aquí, user.url = result.info.secure_url; con Fetch o servicio users
+          // hacer post a db aquí, user.url = result.info.secure_url;
+          console.log("user: " + this.user.email + " nuevo URL: " + result.info.secure_url + " token: " + this.user.token);
+          //localStorage.setItem(user.url, result.info.secure_url);
+          //localStorage.user.url = "aaaaaa";
+
+          this.userService.updateURL(this.user.email, this.user.token, result.info.secure_url).subscribe(user => {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+            console.log("url updated local + db!");
+
+          })
+          console.log("url updated !!"); //funciona hasta aquí...
+          //vovler a hacer get para actualizar user en localStorage con datos nuevos de db
+          this.userService.getUser(this.user.email, this.user.token).subscribe(user => {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+            console.log("Nuevos user obtenido!");
+            //listo 
+          })
+
         }
       }
     );

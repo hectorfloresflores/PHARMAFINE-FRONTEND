@@ -41,7 +41,25 @@ export class UserService {
     return this.http.delete(`/users/${id}`);
   }
 
-  update(email: string, token: string, newUrl: string) {
+  updateURL(email: string, token: string, newUrl: string) {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'email': email,
+        'x-auth': token
+      })
+    };
+
+    const body = { 
+      "url": newUrl 
+    };
+
+    console.log(body, options)
+    console.log("updated (through user.service)")
+    return this.http.patch(this.ROOT_URL + '/users', body, options);
+  }
+
+  updateUser(name: string, lastname: string, password: string, email: string, token: string) {
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -51,20 +69,19 @@ export class UserService {
     };
 
     const body = {
-      url: newUrl
+      "name": name,
+      "lastname": lastname,
+      "password": password/* ,
+      'url': '',
+      'date': '',
+      'genre': '',
+      'checkout': '',
+      'role': '' */
     }
 
-    console.log(options)
+    console.log(body, options)
+    console.log("updated (through user.service)")
     return this.http.patch<User>(this.ROOT_URL + '/users', body, options);
   }
 
-  /* ###
-          PATCH http://localhost:5000/users
-          Content - Type: application / json
-          x - auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmxvcy5mbG9nYXJzQGdtYWlsLmNvbSIsImlhdCI6MTU4OTU2MDg3MCwiZXhwIjoxNTg5NTY0NDcwfQ.aMOmIT91fXBr4YhgvXQCfjPUJxSxaSDre - w43nVx9X4
-          email: 108831227522248479954
-
-          {
-            "url": "www"
-          } */
 }

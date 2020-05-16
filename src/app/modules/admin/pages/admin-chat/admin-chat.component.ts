@@ -16,7 +16,7 @@ export class AdminChatComponent implements OnInit {
   room: String;
   messageText: String;
   messageArray: Array<{ user: String, message: String }> = [];
-  userArray: String[] = ["maria@gmail.com", "raul@mendez.me", "randomuser", "User4", "PepeChuy"]; //idealmente lo obtiene de base de datos
+  userArray: String[] = ["raul@raulmendez.me", "maria@gmail.com", "randomuser", "User4", "PepeChuy", "users aquí..."]; //idealmente lo obtiene de base de datos
   //userArr = this._chatService;
 
 
