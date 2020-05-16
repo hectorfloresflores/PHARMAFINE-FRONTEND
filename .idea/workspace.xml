@@ -25,11 +25,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+=======
+    <list default="true" id="a2473453-db8f-4bf3-aa1d-0a41648dbaca" name="Default Changelist" comment="V18">
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,6 +334,7 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="216" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1589312775382" />
+<<<<<<< Updated upstream
     <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589335088916">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -345,6 +351,28 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589335088914" />
+=======
+    <state x="470" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589569697573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="470" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1589569697573" />
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom" timestamp="1589652440956">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589652440956" />
+    <state width="1419" height="222" key="GridCell.Tab.0.center" timestamp="1589652440953">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589652440953" />
+    <state width="1419" height="222" key="GridCell.Tab.0.left" timestamp="1589652440953">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589652440953" />
+    <state width="1419" height="222" key="GridCell.Tab.0.right" timestamp="1589652440954">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="222" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589652440954" />
+>>>>>>> Stashed changes
     <state width="1419" height="222" key="GridCell.Tab.1.bottom" timestamp="1587699509069">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
