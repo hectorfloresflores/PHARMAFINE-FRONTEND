@@ -6,10 +6,12 @@ import {Product} from "../../shared/models/Product";
   providedIn: 'root'
 })
 export class ProductService {
-
+  private ROOT_URL = 'https://pharmafine.herokuapp.com'
   constructor(private http: HttpClient) { }
 
-  getProducts(name) {
-    return this.http.get<Product[]>( `http://localhost:5000/products?name=${name}`);
+  getProducts(query) {
+    return this.http.get<Product[]>( this.ROOT_URL+`/products?${query}`);
   }
+
+
 }

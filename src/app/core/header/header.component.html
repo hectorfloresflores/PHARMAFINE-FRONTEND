@@ -5,7 +5,7 @@
         <div style="position: absolute;left: 0;">
             <div id="mySidenav" class="sidenav" [style.width]=navSize>
                 <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">X</a>
-                <a href="#" (click)="closeNav()" routerLink="/home" style="color: rgb(157, 135, 8);">Home</a>
+                <a href="#" (click)="closeNav()" routerLink="/home" >Home</a>
                 <a href="#" id="productos" (click)="closeNav()" routerLink="/products">Productos</a>
                 <a href="https://www.facebook.com/pharmafine/">Contact</a>
                 <hr>
@@ -30,7 +30,7 @@
             <img src="../../../assets/images/core/pharma-logo.png" id="ph_home" width="100" height="" alt="" />
         </a>
         <div style="position: absolute;right:0;" class="leftNav">
-            <i style="font-style: normal">
+            <i routerLink="/checkout" style="font-style: normal">
                 <input type="image"  class="bag align-middle" src="../../../assets/images/icons/shopping-bag.png"
                     width="25" height="" alt="" />
                 <span class="align-text-top carrito reduce-span" id="bolsa">Mi bolsa</span>
