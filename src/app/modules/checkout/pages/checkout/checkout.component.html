@@ -1,0 +1,223 @@
+<div class="background">
+
+
+  <div class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5" style="margin-top: 120px;">
+
+          <!-- Shopping cart table -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="p-2 px-3 text-uppercase ">Producto</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Precio</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Cantidad</div>
+                </th>
+                <th scope="col" class="border-0 bg-light">
+                  <div class="py-2 text-uppercase">Eliminar</div>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let product of pro">
+<!--                <app-checkout-list [product]="pro"></app-checkout-list>-->
+
+                <th scope="row" class="border-0">
+                  <div class="p-2">
+                    <img src="{{product.image}}" alt=""
+                         width="70" class="img-fluid rounded shadow-sm">
+                    <div class="ml-3 d-inline-block align-middle">
+                      <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{product.name}}
+                      </a></h5><span class="text-muted font-weight-normal font-italic d-block"></span>
+                    </div>
+                  </div>
+                </th>
+                <td class="border-0 align-middle"><strong>${{product.price}}</strong></td>
+                <td class="border-0 align-bottom">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <a (click)="minusItem(product.id)" href="#" routerLink="/checkout">
+                        <button  class="input-group-text fa fa-minus">
+                        </button></a>
+                    </div>
+                    <input type="text" class="form-control text-center" value="{{map.get(product.id)}}">
+                    <div class="input-group-append">
+                      <a (click)="plusItem(product.id)" href="#" routerLink="/checkout">
+                      <button  class="input-group-text fa fa-plus">
+                                                          </button></a>
+                    </div>
+                  </div>
+                </td>
+                <td class="border-0 align-middle"><a href="#" routerLink="/checkout" (click)="deleteItem(product.id)"
+                                                     class="text-dark"><i class="fa fa-trash"></i></a></td>
+
+
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- End -->
+        </div>
+      </div>
+
+      <div class="row py-5 p-4 bg-white rounded shadow-sm">
+        <div class="col-lg-6">
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+          <div class="p-4">
+            <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+            <div class="input-group mb-4 border rounded-pill p-2">
+              <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3"
+                     class="form-control border-0">
+              <div class="input-group-append border-0">
+                <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i
+                  class="fa fa-gift mr-2"></i>Apply coupon
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control rounded-pill" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Last name</label>
+              <input type="text" class="form-control rounded-pill" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-md-5 mb-3">
+              <label for="country">Country</label>
+              <select class="custom-select d-block w-100 rounded-pill" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state">State</label>
+              <select class="custom-select d-block w-100 rounded-pill" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control rounded-pill" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+
+
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Información del pago</div>
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+              <label class="custom-control-label" for="credit">Credit card</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" for="debit">Debit card</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" for="paypal">Paypal</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control rounded-pill" id="cc-name" placeholder="" required>
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Credit card number</label>
+              <input type="text" class="form-control rounded-pill" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+          </div>
+          <h5 class="text-center">Fecha de vencimiento</h5><br>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="cc-expiration">Mes</label>
+              <input type="text" class="form-control rounded-pill" id="cc-month" placeholder="" required>
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="cc-expiration">Año</label>
+              <input type="text" class="form-control rounded-pill" id="cc-year" placeholder="" required>
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="cc-expiration">CVV</label>
+              <input type="text" class="form-control rounded-pill" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary</div>
+          <div class="p-4">
+            <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal
+              </strong><strong>$390.00</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and
+                handling</strong><strong>$10.00</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                class="text-muted">Tax</strong><strong>$0.00</strong></li>
+              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+                <h5 class="font-weight-bold">$400.00</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="row py-5 p-4 bg-white rounded shadow-sm">
+        <div class="col-lg-12">
+          <div class=" text-center">
+            <a href="#" class="btn btn-dark rounded-pill py-2 ">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

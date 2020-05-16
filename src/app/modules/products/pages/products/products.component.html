@@ -23,7 +23,7 @@ border-color: gray;">
           <div class="card-header" role="tab">
             <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse-search" aria-expanded="true">
               <h5 class="mb-0">
-                Género &nbsp;<i class="fa fa-angle-down"></i>
+                Buscar productos &nbsp;<i class="fa fa-angle-down"></i>
               </h5>
             </a>
           </div>
@@ -32,10 +32,12 @@ border-color: gray;">
           <div id="collapse-search" class="collapse"  data-parent="#accordionEx">
             <div class="card-body">
               <div class="input-group mb-3">
-                <input type="text" class="form-control text-center" value="">
+                <input type="text" class="form-control text-center" [(ngModel)]="busqueda"
+                       (keypress)="searchBy($event,busqueda)" value="">
                 <div class="input-group-append">
 
-                  <button class="btn btn-outline-primary fa fa-search"></button>
+                  <button class="btn btn-outline-primary fa fa-search"
+                          (click)="searchBy(13,busqueda)"></button>
 
                 </div>
               </div>
@@ -50,7 +52,7 @@ border-color: gray;">
           <div class="card-header" role="tab">
             <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse-gender" aria-expanded="true">
               <h5 class="mb-0">
-                Género &nbsp;<i class="fa fa-angle-down"></i>
+                Filtrar por existencia &nbsp;<i class="fa fa-angle-down"></i>
               </h5>
             </a>
           </div>
@@ -58,18 +60,15 @@ border-color: gray;">
           <!-- Card body -->
           <div id="collapse-gender" class="collapse" role="tabpanel" data-parent="#accordionEx">
             <div class="card-body">
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="customCheck" name="example1">
-                <label class="custom-control-label" for="customCheck">Hombre</label>
+              <div class="input-group mb-3">
+
+                  <input type="text" class="" placeholder="Mayor o igual a" [(ngModel)]="greaterThan">
+
+
+                  <button (click)="searchByPriceGreaterThan(13,greaterThan)" class="btn btn-outline-primary fa fa-search "></button>
+
               </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="customCheck1" name="example1">
-                <label class="custom-control-label" for="customCheck1">Mujer</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="customCheck2" name="example1">
-                <label class="custom-control-label" for="customCheck2">Todos</label>
-              </div>
+
             </div>
           </div>
         </div>
@@ -91,14 +90,15 @@ border-color: gray;">
 
                 <div class="">
                   <div class="col-5">
-                    <input type="text" class="" placeholder="Mínimo">
+                    <input type="text" class="" placeholder="Mínimo" [(ngModel)]="min">
                   </div>
                   <div class="col-5">
-                    <input type="text" class="" placeholder="Máximo">
+                    <input type="text" class="" placeholder="Máximo" [(ngModel)]="max">
                   </div>
                   <div class="col-2">
 
-                    <button class="btn btn-outline-primary fa fa-search "></button>
+                    <button class="btn btn-outline-primary fa fa-search "
+                            (click)="searchByPriceRange(13,min,max)"></button>
 
                   </div>
                 </div>
