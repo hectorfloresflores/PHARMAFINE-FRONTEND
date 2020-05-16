@@ -1,0 +1,10 @@
+
+###
+PATCH https://pharmafine.herokuapp.com/users
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmlhQGdtYWlsLmNvbSIsImlhdCI6MTU4OTU4MTQ2MCwiZXhwIjoxNTg5NTg1MDYwfQ.MKSh7ff-4aH61-YeCHcBJSUNVo2kUPnGUoJoS54j8-g
+email: maria@gmail.com
+
+{
+"url": "https://res.cloudinary.com/pae2020/image/upload/v1589507446/users/vb5flhdhty3dyicoj68m.png"
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import { cloudinary }
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PharmaFine';
+
+  /* ngAfterViewInit(){
+
+    cloudinary.openUploadWidget({
+      cloudName: cloudName,
+      apiKey : apiKey,
+      inlineContainer:document.getElementById('my-widget-container'),
+    }, (err, result)=>{
+      console.log(err)
+      console.log(result)
+    })
+  
+  } */
 }

@@ -16,7 +16,7 @@ export class AdminChatComponent implements OnInit {
   room: String;
   messageText: String;
   messageArray: Array<{ user: String, message: String }> = [];
-  userArray: String[] = ["General", "User1", "User2", "User3", "PepeChuy"]; //idealmente lo obtiene de base de datos
+  userArray: String[] = ["General"]; //idealmente lo obtiene de base de datos
   //userArr = this._chatService;
 
 
@@ -39,7 +39,20 @@ export class AdminChatComponent implements OnInit {
       .subscribe(data => this.messageArray.push(data));
 
     this._chatService.newMessageReceived()
-      .subscribe(data => this.messageArray.push(data));
+      .subscribe((data) => {
+        this.messageArray.push(data);
+        if (data.user != "+ Admin" && !this.userArray.includes(data.user.replace("- ", ""))) {
+          this.userArray.push(data.user.replace("- ", ""));
+          console.log(data.user, data.message);
+        };
+
+        if (data.message.includes("has left this room.")){
+          console.log("left!");
+          var filteredArr = this.userArray.filter(function(e) { return e !== data.user.replace("- ", "") })
+
+          this.userArray = filteredArr;
+        }
+      });
     console.log(this.messageArray);
 
     this._chatService.newUserCreated()
@@ -69,7 +82,7 @@ export class AdminChatComponent implements OnInit {
 
   ngOnInit(): void {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
-    this.currUser = JSON.parse(localStorage.user); //para obter user local
+      this.currUser = JSON.parse(localStorage.user); //para obter user local
 
     this.user = "Admin"
     this.room = "General";

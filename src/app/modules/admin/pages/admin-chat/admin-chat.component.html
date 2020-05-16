@@ -23,7 +23,8 @@ border-color: gray;">
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>{{currUser.name}} {{currUser.lastname}}<span class="chat_date"style="color: rgb(157, 135, 8);" >Admin</span></h5>
+                  <h5>{{currUser.name}} {{currUser.lastname}}<span class="chat_date"
+                      style="color: rgb(157, 135, 8);">Admin</span></h5>
                   <p>{{currUser.email}}</p>
                 </div>
               </div>
@@ -42,12 +43,14 @@ border-color: gray;">
 
                 <div class="col-sm-5">
                   <div class="form-group">
-                    <label for="roomInput">Chat: <small><small><small>("General" o user-email)</small></small></small></label>
-                    <input name="roomInput" id="roomInput" class="form-control" [(ngModel)]="room" value="General">
+                    <label for="roomInput">Chat: <small><small><small>(user-email)</small></small></small></label>
+                    <select id="username" class="form-control" [(ngModel)]="room">
+                      <option *ngFor="let room of userArray" value="{{room}}">{{room}}</option>
+                    </select>
 
-                    <!-- <select id="username" class="form-control" [(ngModel)]="room">
-                      <option *ngFor="let room of roomArray" value="{{room}}">{{room}}</option>
-                    </select> -->
+                    <input name="roomInput" id="roomInput" class="form-control" [(ngModel)]="room" value="General"
+                      placeholder="Escribe email">
+
                   </div>
                 </div>
 

@@ -4,6 +4,12 @@ import {User} from "../../shared/models/User";
 import {catchError} from "rxjs/operators";
 import {throwError} from "rxjs";
 import {Product} from "../../shared/models/Product";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
+import { User } from "../../shared/models/User";
+import { catchError } from "rxjs/operators";
+import { throwError } from "rxjs";
+import { stringify } from 'querystring';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 
 @Injectable({ providedIn: 'root' })
@@ -17,12 +23,13 @@ export class UserService {
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-          'email':email,
-        'x-auth': token})
+        'email': email,
+        'x-auth': token
+      })
     }
 
     console.log(options)
-    return this.http.get<User>(this.ROOT_URL + '/users',options);
+    return this.http.get<User>(this.ROOT_URL + '/users', options);
   }
 
   register(user: User) {
@@ -32,7 +39,7 @@ export class UserService {
       })
     }
 
-    return this.http.post(this.ROOT_URL +`/users`, user, options);
+    return this.http.post(this.ROOT_URL + `/users`, user, options);
   }
 
   delete(id: number) {
@@ -75,5 +82,47 @@ export class UserService {
     return this.http.delete(this.ROOT_URL+'/checkout',options);
   }
 
+  updateURL(email: string, token: string, newUrl: string) {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'email': email,
+        'x-auth': token
+      })
+    };
+
+    const body = { 
+      "url": newUrl 
+    };
+
+    console.log(body, options)
+    console.log("updated url (through user.service)")
+    return this.http.patch(this.ROOT_URL + '/users', body, options);
+  }
+
+  updateUser(name: string, lastname: string, email: string, token: string) {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'email': email,
+        'x-auth': token
+      })
+    };
+
+    const body = {
+      "name": name,
+      "lastname": lastname /*,
+      "password": password ,
+      'url': '',
+      'date': '',
+      'genre': '',
+      'checkout': '',
+      'role': '' */
+    }
+
+    console.log(body, options)
+    console.log("updated user (through user.service)")
+    return this.http.patch<User>(this.ROOT_URL + '/users', body, options);
+  }
 
 }

@@ -56,8 +56,8 @@
   <div *ngIf="loggedIn" class="modal-footer">
     <a (click)="logOut()" href="javascript: void(0)" class="btn btn-outline-danger mr-auto" role="button">Cerrar
       sesión</a>
-    <a *ngIf="user!= undefined && user.role == 'USER'" href="/user" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Editar mi
+    <a *ngIf="user!= undefined && user.role == 'USER'" [routerLink]="['/user']" routerLinkActive="router-link-active" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Editar mi
       perfil</a>
-    <a *ngIf="user!= undefined && user.role == 'ADMIN'" href="/admin" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Admin</a>
+    <a *ngIf="user!= undefined && user.role == 'ADMIN'" [routerLink]="['/admin']" routerLinkActive="router-link-active" data-toggle="modal" class="btn btn-outline-secondary" data-dismiss="modal" role="button">Admin</a>
   </div>
 </ng-template>
