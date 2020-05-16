@@ -49,7 +49,7 @@ const config: SocketIoConfig = { url: environment.url, options: {} };
     ProductListComponent,
     CheckoutComponent,
     CheckoutListComponent
-    FileSelectDirective
+    //FileSelectDirective
   ],
   imports: [
     BrowserModule,
