@@ -12,13 +12,16 @@ export class AdminComponent implements OnInit {
   userPic = "";
   private widget: any = null;
 
+  editUser = { name: "", lastname: "" }; //objeto a usar cuando se edita admin
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
       this.user = JSON.parse(localStorage.user); //para obter user local
 
-    // iría user.url (directo de localStorage)
+    this.editUser.name = this.user.name;
+    this.editUser.lastname = this.user.lastname;
 
     this.widget = (window as any).cloudinary.createUploadWidget(
       {
@@ -53,7 +56,7 @@ export class AdminComponent implements OnInit {
           this.userService.getUser(this.user.email, this.user.token).subscribe(user => {
             localStorage.setItem('user', JSON.stringify(user));
             window.location.reload();
-            console.log("Nuevos user obtenido!");
+            console.log("Nuevo url obtenido!");
             //listo
           })
 
@@ -65,6 +68,23 @@ export class AdminComponent implements OnInit {
   onOpenUpload($event) {
     this.widget.open();
     console.log('Widget used', $event);
+  }
+
+  submitEdit() {
+    this.userService.updateUser(this.editUser.name, this.editUser.lastname, this.user.email, this.user.token).subscribe(user => {
+      localStorage.setItem('user', JSON.stringify(user));
+      window.location.reload();
+      console.log("user updated local + db!");
+
+    })
+    console.log("user updated !!");
+    //vovler a hacer get para actualizar user en localStorage con datos nuevos de db
+    this.userService.getUser(this.user.email, this.user.token).subscribe(user => {
+      localStorage.setItem('user', JSON.stringify(user));
+      window.location.reload();
+      console.log("Nuevo user obtenido!");
+      //listo
+    })
   }
 
 }

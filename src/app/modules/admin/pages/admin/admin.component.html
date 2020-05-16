@@ -70,6 +70,8 @@ border-color: gray;">
                       <div class="text-center text-sm-right">
                         <span class="badge badge-secondary" style="color: gold;">Administrador</span>
                         <div class="text-muted"><small></small></div>
+                        <span *ngIf="user.isVerified" class="badge badge-secondary"
+                          style="color: gold;">Verificado</span>
                       </div>
                     </div>
                   </div>
@@ -78,6 +80,7 @@ border-color: gray;">
                     <hr>
                     <h5>Datos personales:</h5>
                     <!-- <form class="form" novalidate=""> -->
+                    <span>{{editUser | json}}</span>
                     <br>
                     <div class="row">
                       <div class="col">
@@ -85,15 +88,15 @@ border-color: gray;">
                           <div class="col">
                             <div class="form-group">
                               <label>Nombre</label>
-                              <input class="form-control" type="text" name="name" placeholder="Juanito Pérez"
-                                value={{user.name}}>
+                              <input class="form-control" type="text" name="name" placeholder="{{user.name}}"
+                                value={{user.name}} [(ngModel)]="editUser.name">
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
                               <label>Apellido</label>
-                              <input class="form-control" type="text" name="username" placeholder="eljuan123.s"
-                                value={{user.lastname}}>
+                              <input class="form-control" type="text" name="username" placeholder="{{user.lastname}}"
+                                value={{user.lastname}} [(ngModel)]="editUser.lastname">
                             </div>
                           </div>
                         </div>
@@ -101,7 +104,7 @@ border-color: gray;">
                           <div class="col">
                             <div class="form-group">
                               <label>Correo</label>
-                              <input disabled class="form-control" type="text" placeholder="user@example.com"
+                              <input disabled class="form-control" type="text" placeholder="{{user.email}}"
                                 value={{user.email}}>
                             </div>
                           </div>
@@ -110,7 +113,8 @@ border-color: gray;">
                           <div class="col mb-3">
                             <div class="form-group">
                               <label>Rol</label>
-                              <input class="form-control" type="text" placeholder="My Role" value={{user.role}}>
+                              <input disabled class="form-control" type="text" placeholder="My Role"
+                                value={{user.role}}>
                             </div>
                           </div>
                         </div>
@@ -123,32 +127,18 @@ border-color: gray;">
                           <div class="col">
                             <div class="form-group">
                               <label>Contraseña actual</label>
-                              <input class="form-control" type="password" placeholder="••••••">
+                              <input disabled class="form-control" type="password" placeholder="(contraseñas cifradas)">
                             </div>
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Nueva contraseña</label>
-                              <input class="form-control" type="password" placeholder="••••••">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <div class="form-group">
-                              <label>Confirmar<span class="d-none d-xl-inline">
-                                  contraseña</span></label>
-                              <input class="form-control" type="password" placeholder="••••••"></div>
-                          </div>
-                        </div>
+
                       </div>
                       <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                        <div class="mb-2"><b>Mantenernos en contacto</b></div>
+                        <div class="mb-2"><b><br></b></div>
                         <div class="row">
                           <div class="col">
-                            <label>Configuración de correo</label>
+
+                            <!-- <label>Configuración de correo</label>
                             <div class="custom-controls-stacked px-2">
                               <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="notifications-news">
@@ -158,14 +148,33 @@ border-color: gray;">
                                 <input type="checkbox" class="custom-control-input" id="notifications-offers">
                                 <label class="custom-control-label" for="notifications-offers">Ofertas</label>
                               </div>
+                            </div> -->
+
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Nueva contraseña</label>
+                                  <input disabled class="form-control" type="password" placeholder="••••••">
+                                </div>
+                              </div>
                             </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Confirmar<span class="d-none d-xl-inline">
+                                      contraseña</span></label>
+                                  <input disabled class="form-control" type="password" placeholder="••••••"></div>
+                              </div>
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col d-flex justify-content-end">
-                        <button class="btn btn-dark" type="submit" style="color: gold;">Guardar
+                        <button class="btn btn-dark" type="submit" style="color: gold;" (click)="submitEdit()">Guardar
                           cambios</button>
                       </div>
                     </div>

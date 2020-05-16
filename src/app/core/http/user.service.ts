@@ -55,11 +55,11 @@ export class UserService {
     };
 
     console.log(body, options)
-    console.log("updated (through user.service)")
+    console.log("updated url (through user.service)")
     return this.http.patch(this.ROOT_URL + '/users', body, options);
   }
 
-  updateUser(name: string, lastname: string, password: string, email: string, token: string) {
+  updateUser(name: string, lastname: string, email: string, token: string) {
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -70,8 +70,8 @@ export class UserService {
 
     const body = {
       "name": name,
-      "lastname": lastname,
-      "password": password/* ,
+      "lastname": lastname /*,
+      "password": password ,
       'url': '',
       'date': '',
       'genre': '',
@@ -80,7 +80,7 @@ export class UserService {
     }
 
     console.log(body, options)
-    console.log("updated (through user.service)")
+    console.log("updated user (through user.service)")
     return this.http.patch<User>(this.ROOT_URL + '/users', body, options);
   }
 
