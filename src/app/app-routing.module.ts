@@ -12,6 +12,7 @@ import {CheckoutComponent} from "./modules/checkout/pages/checkout/checkout.comp
 
 
 
+
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},

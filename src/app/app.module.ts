@@ -15,7 +15,7 @@ import { ProductsComponent } from './modules/products/pages/products/products.co
 import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './core/header/signin/signin.component';
 import { RegisterComponent } from './core/header/register/register.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './core/authentication/authentication.service';
 import { UserComponent } from './modules/user/pages/user/user.component';
@@ -59,11 +59,11 @@ const config: SocketIoConfig = { url: environment.url, options: {} };
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
     SocketIoModule.forRoot(config),
     CloudinaryModule.forRoot(Cloudinary, {
       cloud_name: 'pae2020',
