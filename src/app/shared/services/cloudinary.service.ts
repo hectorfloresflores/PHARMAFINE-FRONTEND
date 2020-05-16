@@ -15,7 +15,7 @@ import { Cloudinary } from '@cloudinary/angular-5.x';
 
 @Component({
   selector: 'photo-list',
-  templateUrl: 'photo-upload.component.html'
+  //templateUrl: 'photo-upload.component.html'
 })
 export class PhotoUploadComponent implements OnInit {
 
