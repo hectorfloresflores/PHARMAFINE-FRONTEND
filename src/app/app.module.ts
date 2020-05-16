@@ -23,14 +23,8 @@ import { AdminComponent } from './modules/admin/pages/admin/admin.component';
 import { UserChatComponent } from './modules/user/pages/user-chat/user-chat.component';
 import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.component';
 import { environment } from 'src/environments/environment.prod';
-
-
-
-
-
-import { CheckoutComponent } from './modules/checkout/pages/checkout/checkout.component';
 import { CheckoutListComponent } from './modules/checkout/components/checkout-list/checkout-list.component';
-
+import { CheckoutComponent } from './modules/checkout/pages/checkout/checkout.component';
 import { ProductListComponent } from './modules/products/components/product-list/product-list.component';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
@@ -54,7 +48,7 @@ const config: SocketIoConfig = { url: environment.url, options: {} };
     AdminChatComponent,
     ProductListComponent,
     CheckoutComponent,
-    CheckoutListComponent,
+    CheckoutListComponent
     FileSelectDirective
   ],
   imports: [
