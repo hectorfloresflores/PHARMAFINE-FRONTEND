@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../../core/http/user.service';
+import {ProductService} from "../../../../core/http/product.service";
 
 @Component({
   selector: 'app-admin',
@@ -14,7 +15,8 @@ export class AdminComponent implements OnInit {
 
   editUser = { name: "", lastname: "" }; //objeto a usar cuando se edita admin
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+              private productsService: ProductService) { }
 
   ngOnInit(): void {
     if (localStorage.user != 'undefined' && localStorage.user != undefined)
@@ -86,5 +88,21 @@ export class AdminComponent implements OnInit {
       //listo
     })
   }
+
+
+  // createProduct() {
+  //   let newProduct = {
+  //     name: "prueba 1",
+  //     description: "prueba 1",
+  //     precio: 700,
+  //     image: "https://picsum.photos/id/15/300/300",
+  //     id: "0005",
+  //     stock: 10
+  //   }
+  //   this.productsService.createProduct(newProduct,this.user.email, this.user.token)
+  //     .subscribe(result =>{
+  //       alert('created')
+  //     })
+  // }
 
 }
