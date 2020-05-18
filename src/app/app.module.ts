@@ -48,7 +48,7 @@ const config: SocketIoConfig = { url: environment.url, options: {} };
     AdminChatComponent,
     ProductListComponent,
     CheckoutComponent,
-    CheckoutListComponent
+    CheckoutListComponent,
     FileSelectDirective
   ],
   imports: [

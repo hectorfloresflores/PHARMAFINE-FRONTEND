@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+import {ProductService} from "../../../../core/http/product.service";
 
 @Component({
   selector: 'app-home',
@@ -29,5 +30,6 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
 
 }
