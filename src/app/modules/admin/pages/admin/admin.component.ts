@@ -90,7 +90,7 @@ export class AdminComponent implements OnInit {
   }
 
 
-  // createProduct() {
+  createProduct() {
   //   let newProduct = {
   //     name: "prueba 1",
   //     description: "prueba 1",
@@ -103,6 +103,6 @@ export class AdminComponent implements OnInit {
   //     .subscribe(result =>{
   //       alert('created')
   //     })
-  // }
+  }
 
 }

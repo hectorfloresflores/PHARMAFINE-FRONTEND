@@ -29,6 +29,7 @@ import { ProductListComponent } from './modules/products/components/product-list
 import { FileSelectDirective } from 'ng2-file-upload';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
 import * as  Cloudinary from 'cloudinary-core';
+import { NuevoProductoComponent } from './modules/admin/pages/nuevo-producto/nuevo-producto.component';
 // This app was made it with the folder structure expose in the link below...
 // https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
 const config: SocketIoConfig = { url: environment.url, options: {} };
@@ -48,6 +49,7 @@ const config: SocketIoConfig = { url: environment.url, options: {} };
     AdminChatComponent,
     ProductListComponent,
     CheckoutComponent,
+    NuevoProductoComponent
     //FileSelectDirective
   ],
   imports: [

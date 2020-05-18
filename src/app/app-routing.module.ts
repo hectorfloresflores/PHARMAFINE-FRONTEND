@@ -9,6 +9,7 @@ import { UserComponent } from './modules/user/pages/user/user.component';
 import { UserChatComponent } from './modules/user/pages/user-chat/user-chat.component';
 import { AdminChatComponent } from './modules/admin/pages/admin-chat/admin-chat.component';
 import {CheckoutComponent} from "./modules/checkout/pages/checkout/checkout.component";
+import { NuevoProductoComponent } from './modules/admin/pages/nuevo-producto/nuevo-producto.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'user-chat', component: UserChatComponent/* , canActivate: [AuthGuard] */},
   {path: 'admin', component: AdminComponent /*, canActivate: [AuthGuard] */},
   {path: 'admin-chat', component: AdminChatComponent/* , canActivate: [AuthGuard] */},
+  {path: 'nuevo-producto', component: NuevoProductoComponent/* , canActivate: [AuthGuard] */},
   {path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]}
 ];
 
